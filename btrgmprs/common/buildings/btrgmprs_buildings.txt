@@ -1,0 +1,49 @@
+buildings = {
+
+	btrgmpstockpile_steel = {
+		show_on_map = 0
+		base_cost = 0
+		local_resources_steel = 1
+		max_level = 999
+		icon_frame = 20
+	}
+	btrgmpstockpile_aluminum = {
+		show_on_map = 0
+		base_cost = 0
+		local_resources_aluminium = 1
+		max_level = 999
+		icon_frame = 20
+	}
+
+	btrgmpstockpile_tungsten = {
+		show_on_map = 0
+		base_cost = 0
+		local_resources_tungsten = 1
+		max_level = 999
+		icon_frame = 20
+	}
+	btrgmpstockpile_chromium = {
+		show_on_map = 0
+		base_cost = 0
+		local_resources_chromium = 1
+		max_level = 999
+		icon_frame = 20
+	}
+	btrgmpstockpile_oil = {
+		show_on_map = 0
+		base_cost = 0
+		local_resources_oil = 1
+		max_level = 999
+		icon_frame = 20
+
+		
+	}
+
+	btrgmpstockpile_rubber = {
+		show_on_map = 0
+		base_cost = 0
+		local_resources_rubber = 1
+		max_level = 999
+		icon_frame = 20
+	}
+}

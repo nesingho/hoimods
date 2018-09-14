@@ -1,0 +1,224 @@
+﻿l_german:
+SPIES_TOOLTIP:0 "§H[?spies_display]§! £spy verfügbar.\n\n§H[?dm]§! £spy pro Monat werden rekrutiert."
+ SPY_EFFICIENCY_TOOLTIP:0 "Die Spionageeffizienz ist derzeit bei §H[?Spy_Efficiency]%§! \n\n§H[?Spy_Efficiency_Stability]%§! durch Stabilität £stability_espionage.\n§H[?encryption_decryption_efficiency]%§! durch Ver- und Entschlüsselung £decryption_espionage \n§H[?training_efficiency]%§! durch Agententraining £spy"
+ Spy_University:0 "Spionageuniversität"
+ Spy_University_desc:0 "Dieses Gebäude versorgt den Staat mit ausgebildeten Spionen.\n\n§RDie Rekrutierung wird auf §H5 £spy pro Tag§! begrenzt. \nDarüber hinaus gebaute Universitäten werden keine Spione rekrutieren, es sei denn, andere Universitäten werden vom Feind erobert oder zerstört."
+ SPY_MENU_TOOLTIP:0 "§HHier klicken, um das Menü für verdeckte Aktionen zu öffnen.§!\n(Wenn Sie Kaiserreich nutzen und die Meinungswerte unter diesem Symbol überprüfen möchten, klicken Sie auf die Registerkarte Details. \n§RDieses Menü ist NICHT sichtbar, wenn Sie die Registerkarte Details anstelle Diplomatie ausgewählt haben.§!"
+ DISRUPT_CIVILIAN_TOOLTIP:0 "§GStörung der zivilen Industrie§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird zivile Fabriken des Feindes beschädigen§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ DISRUPT_MILITARY_TOOLTIP:0 "§GStörung der Militärindustrie§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird militärische Fabriken des Feindes beschädigen§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ SABOTAGE_PRODUCTION_TOOLTIP:0 "§GProduktion sabotieren§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird die gegnerische Produktion sabotieren und ihre Effizienz um §R15%§! für §R60§! Tage verringern.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ SABOTAGE_EXTRACTION_TOOLTIP:0 "§GRessourcenproduktion sabotieren§!\n\nSie brenötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wir die gegnerische Ressourcenproduktion sabotieren und ihre Effizienz um §R15%§! für §R60§! Tage verringern.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ SABOTAGE_RECRUITMENT_TOOLTIP:0 "§GRekrutierung sabotieren§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Aktion wird den Einberufungsprozess des Feindes unterbrechen und ihn um §R5%§!.§! reduzieren. \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ SABOTAGE_PLANNING_TOOLTIP:0 "§GMilitärische Pläne sabotieren§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird die Schnelligkeit der gegnerischen Planungen um §R30%§! und ihren Maximalwert um §R25%§! für §R90§! Tage reduzieren.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ DISRUPT_SUPPLY_TOOLTIP:0 "§GVersorgungslinien sabotieren§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird durch Sabotage der gegnerischen Versorgungslinien die Verstärkungsrate um §R5%§! verringern und dafür den Verbrauch um §R10%§!, die Auswirkungen von Versorgungsengpässen um §R20%§! und den Verschleiß um §R10%§! für §R60§! Tage erhöhen.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ JAM_RADAR_TOOLTIP:0 "§GFlugradar stören§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird die gegnerischen Radarsysteme stören und die Lufthoheit, den Bodenunterstützungangriff und die Bodenunterstützungsverteidigung um §R10%§! verringern sowie das Unfallrisiko, den Nacht- und den Wettermalus um §R20%§! für §R60§! Tage erhöhen.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ POISON_FOOD_TOOLTIP:0 "§GVerpflegung vergiften§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird die gegnerische Truppenverpflegung vergiften und deren Generälen den Status §R"Krank"§! für §R60§! Tage geben.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ SUPPORT_RESISTANCE_TOOLTIP:0 "§GWiderstandsbewegung unterstützen§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird Auswirkungen von Widerstandsbewegungen beim Gegner um §R40%§! für §R60§! Tage erhöhen.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ SUPPORT_PACIFISTS_TOOLTIP:0 "§GFriedensbewegung unterstützen§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird durch Unterstützung der Friedensbewegung die wöchentliche gegnerische Kriegsunterstützung um §R-1%§! sowie die Mobilisierungsrate um §R-30%§! für §R60§! Tage verringern.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ SABOTAGE_RESEARCH_TOOLTIP:0 "§GForschung sabotieren§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird durch Sabotage der gegnerischen Forschung deren Fortschritt um §R15%§! für §R60§! Tage verringern.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ POLITICAL_DISCONTENT_TOOLTIP:0 "§GPolitische Unzufriedenheit sähen§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird politische Unzufriedenheit beim Gegner sähen und die Zunahme der politischen Macht um §R25%§! für §R90§! Tage verringern.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ INFILTRATE_TOOLTIP:0 "§GInfiltration§!\n\nSie benötigen §H100§! £spy für die verdeckte Operation. §H\nDiese Operation wird unser Spionagehauptquartier mit täglichen Geheimdienstberichten über den Gegner versorgen, bis unsere Spione entdeckt werden. Wir können auch die gegnerische Technologie untersuchen und zu unserem Vorteil nutzen.§! \nNur §REINE§! verdeckte Operation kann innerhalb von §R30§! Tagen auf dasselbe Land angewendet werden."
+ 
+ LABORATORY_TOOLTIP:0 "Weisen Sie diesem Labor Spione zu. Sie studieren die Technologie des momentan infiltrierten Gegners und versuchen, an Baupläne gegnerischer Einheiten zu gelangen."
+ SPY_XP_TOOLTIP:0 "Momentan können §H[?spy_xp]§! £spy_xp für neue Spionageaktionen eingesetzt werden. Steigern Sie die Erfahrung durch weitere verdeckte Operationen."
+ LEVEL_2_TOOLTIP:0 "Sie benötigen §H100§! £spy_xp, um dieses Stufe freizuschalten. \nDadurch werden folgende Spionageaktivitäten ermöglicht: \n§HKriegspropaganda \n§HForschungshilfe \n§HWiderstand unterdrücken"
+ LEVEL_3_TOOLTIP:0 "Sie benötigen §H100§! £spy_xp, um diese Stufe freizuschalten. \nDadurch werden folgende Spionageaktivitäten ermöglicht: \n§HFreiwilligenprogramm \n§HInfiltration \nFeindliche Technologie stehlen \nPriorität des Geheimdienstchefs festlegen \nWiderstandsbewegung bewaffnen"
+ TRAINING_PROGRAMS_TOOLTIP:0 "Sie benötigen §H50§! £spy_xp, um diese Mission freizuschalten. \n\nSpione, die daran arbeiten, maximieren die Spionageeffizienz."
+ WAR_PROPAGANDA_TOOLTIP:0 "Sie benötigen §H50§! £spy_xp, um diese Mission freizuschalten. \nDer §HGeheimdienstchef§! benötigt mindestens §HStufe §R2§!§!. \n\nSpione auf dieser Mission propagandieren zugunsten der Kriegsunterstützung in unserem Volk."
+ RESEARCH_AID_TOOLTIP:0 "Sie benötigen §H50§! £spy_xp, um diese Mission freizuschalten. \nDer §HGeheimdienstchef§! benötigt mindestens §HStufe §R2§!§!. \n\nSpione auf dieser Misson leiten Geheimdienstberichte direkt an unsere zuständigen Forschungseinrichtungen weiter, um unseren wissenschaftlichen Fortschritt zu beschleunigen."
+ WAR_PROPAGANDA_TOOLTIP:0 "Sie benötigen §H50§! £spy_xp, um diese Mission freizuschalten. \nDer §HGeheimdienstchef§! benötigt mindestens §HStufe §R2§!§!. \n\nSpione auf dieser Mission propagandieren zugunsten der Kriegsunterstützung in unserem Volk."
+ SUPPRESS_RESISTANCE_TOOLTIP:0 "Sie benötigen §H50§! £spy_xp, um diese Mission freizuschalten. \nDer §HGeheimdienstchef§! benötigt mindestens §HStufe §R2§!§!. \n\nSpione werden aktiv die Widerstandsbewegung gegen unsere Regierung infiltrieren und bekämpfen."
+ FREIWILLIGE_PROGRAM_TOOLTIP:0 "Sie benötigen §H50§! £spy_xp, um diese Mission freizuschalten.\nDer §HGeheimdienstchef§! benötigt mindestens §HStufe §R3§!§!. \n\nSpione werden in unseren Provinzen nach Kriegsbegeisterten fahnden und diese für den Geheimdienst rekrutieren."
+ 
+ STUDY_TECHNOLOGY_SPIES_TOOLTIP:0 "Weisen Sie §H200§! £spy zu, die daran arbeiten, die Technologie des infiltrierten Gegners zu untersuchen und Forschungspunkte zu sammeln, wodurch wir gegnerische Einheiten nachbauen können."
+ RESEARCH_POINTS_TOOLTIP:0 "Sie haben derzeit §H[?research_points]§! £research_points zum Nachbau gegnerischer Einheiten übrig.\nForschungspunkte können §RNUR§! auf das aktuell §Rinfiltrierte§! Ziel angewandt werden."
+ LIGHT_ARMOR_TOOLTIP:0 "§HLeichte Panzerung des Gegners untersuchen§!\n\nSie benötigen §H500§! £research_points, um dies freizuschalten.\nAktueller Stand: §H[?enemy_light_armor_year]§! \n\nDiese Aktion ist §RNUR§! möglich, wenn das gegnerische Technologielevel eine Stufe höher ist."
+ MEDIUM_ARMOR_TOOLTIP:0 "§HMittlere Panzerung des Gegners erforschen§!\n\nSie benötigen §H500§! £research_points, um dies freizuschalten.\nAktueller Stand: §H[?enemy_medium_armor_year]§! \n\nDiese Aktion ist §RNUR§! möglich, wenn das gegnerische Technologielevel eine Stufe höher ist.""
+ HEAVY_ARMOR_TOOLTIP:0 "§HSchwere Panzerung des Gegners erforschen§!\n\nSie benötigen §H500§! £research_points, um dies freizuschalten.\nAktueller Stand: §H[?enemy_heavy_armor_year]§! \n\nDiese Aktion ist §RNUR§! möglich, wenn das gegnerische Technologielevel eine Stufe höher ist.""
+ FIGHTER_TOOLTIP:0 "§HJägertechnologie des Gegners erforschen§!\n\nSie benötigen §H500§! £research_points, um dies freizuschalten.\nAktueller Stand: §H[?enemy_fighter_year]§! \n\nDiese Aktion ist §RNUR§! möglich, wenn das gegnerische Technologielevel eine Stufe höher ist.""
+ CAS_TOOLTIP:0 "§HBodenunterstützungstechnologie des Gegners erforschen§!\n\nSie benötigen §H500§! £research_points, um dies freizuschalten.\nAktueller Stand: §H[?enemy_CAS_year]§! \n\nDiese Aktion ist §RNUR§! möglich, wenn das gegnerische Technologielevel eine Stufe höher ist.""
+ STRATEGIC_BOMBER_TOOLTIP:0 "§HStrategische Bombertechnologie des Gegners erforschen§!\n\nSie benötigen §H500§! £research_points, um dies freizuschalten.\nAktueller Stand: §H[?enemy_strategic_bomber_year]§! \n\n\nDiese Aktion ist §RNUR§! möglich, wenn das gegnerische Technologielevel eine Stufe höher ist.""
+ ARM_RESISTANCE_TOOLTIP:0 "Widerstandsbewegung in §H[From.GetName]§! bewaffnen.\n\nDie Stärke der Widerstandsbewegung §RMUSS§! in diesem Gebiet positiv sein!"
+ INCREASE_ARM_RESISTANCE_TOOLTIP:0 "Ausrüstungslieferung um §H1,000§! erhöhen.\nDer Erfolgsfaktor erhöht sich um §G10§! je 1000 Ausrüstung."
+ DECREASE_ARM_RESISTANCE_TOOLTIP:0 "Ausrüstungslieferung um §H1,000§! verringern."
+ 
+ CANCEL_INFILTRATION_TOOLTIP:0 "Infiltration abbrechen.\n\n§H150§! £spy kehren nach Hause zurück."
+
+ ENHANCED_TOOLTIP:0 "§H70%§! Chance, die Macht hinter der verdeckten Operation herauszufinden."
+ 
+ SEND_TOOLTIP:0 "§RKEIN§! Operationsziel gewählt!"
+ SEND_EXP_TOOLTIP:0 "Diese Aktion benötigt §H100§! £spy\n\nDer Erfolg der Operation ist von der eigenen und gegnerischen Spionageeffizienz, der Stärke des Widerstands in §H[From.GetName]§! und dem Erfolgsfaktor durch Ausrüstungslieferungen abhängig."
+ 
+ HQ_TOOLTIP:0 "Spionagehauptquartier"
+ 
+ SPIES_RETURN_TOOLTIP:0 "Operation endet:\n§H100§! £spy kehren nach Hause zurück\n§H35§! £spy_xp erhalten!"
+ XP_GAIN_TOOLTIP:0 "We gain §H35§! £spy_xp"
+ 
+ espionage.news.334.t:0 "Zivile Industrie durch verdeckte Aktionen gestört!"
+ espionage.news.334.desc:0 "Einer ausländischen Macht ist es gelungen, unsere zivile Industrie mit auf unserem Boden tätigen Spionen teilweise zu stören. Dies kann dazu geführt haben, dass einige unserer Fabriken beschädigt wurden. Dies wird auch den Bau neuer ziviler Fabriken für 45 Tage verlangsamen. Wir müssen reagieren!"
+ espionage.news.334.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen?"
+ 
+ espionage.news.335.t:0 "Wir haben eine verdeckte Operation abgewehrt!"
+ espionage.news.335.desc:0 "Eine ausländische Macht hat versucht, eine verdeckte Aktion auf unserem Boden durchzuführen. Aber dank unseres großartigen Geheimdienstes haben wir den Plan aufgedeckt und alle beteiligten Spione verhaftet, um sie zu verhören. Bislang haben sie sich geweigert, zuzugeben, welches Land hinter dem Angriff steckt. Was sollen wir tun?!"
+ espionage.news.335.a:0 "Verwenden Sie spezielle Verhörmethoden!"
+ espionage.news.335.b:0 "Alle hinrichten!"
+  
+ espionage.news.336.t:0 "Operation in [From.GetName] erfolgreich!"
+ espionage.news.336.desc:0 "Unsere Spione haben erfolgreich [From.GetName] infiltriert und die geheime Aktion durchgeführt, um die Sie gebeten haben. Der Feind hat dank unserer hohen Spionageeffizienz keine Kenntnis von der Gruppe, die hinter diesem Angriff steckt."
+ espionage.news.336.a:0 "Sehr gut!"
+ 
+ espionage.news.337.t:0 "Operation in [From.GetName] ist schiefgelaufen!"
+ espionage.news.337.desc:0 "Durch eine überraschende Wendung der Ereignisse entdeckte [From.GetName] unsere Spione und verhaftete sie. Bisher haben diese aufrechten Patrioten auch in stundenlangen Verhören nichts verraten. Leider werden Sie dafür hingerichtet. Unsere Diplomaten arbeiten unermüdlich daran, unsere Beteiligung an dieser Operation zu verschleiern."
+ espionage.news.337.a:0 "Glaubhaft abstreiten!"
+ 
+ espionage.news.338.t:0 " Operation in [From.GetName] ist schiefgelaufen!"
+ espionage.news.338.desc:0 "Durch eine überraschende Wendung der Ereignisse entdeckte [From.GetName] unsere Spione und verhaftete sie. Die Regierung nutzt spezielle Verhörmethoden, die unsere Beteiligung an der Operation aufdecken könnten!"
+ espionage.news.338.a:0 "Beten wir, dass sie vorher sterben!"
+ 
+ espionage.news.339.t:0 "Untersuchung: Verschwörer aufgedeckt!"
+ espionage.news.339.desc:0 "Mittels des Einsatzes von speziellen Verhörmethoden gaben die ausländischen Spione zu, dass [From.GetName] hinter einigen der verdeckten Aktionen steckt, die kürzlich auf unserem Boden stattfanden."
+ espionage.news.339.a:0 "Sie werden dafür bezahlen!"
+ 
+ espionage.news.340.t:0 "Untersuchung gescheitert!"
+ espionage.news.340.desc:0 "Den Einsatz spezieller Verhörmethoden haben die meisten inhaftierten Spione leider nicht überlebt. Vielleicht wurde zu intensiv davon Gebrauch gemacht. Wir konnten nicht feststellen, wer dahinter steckt. "
+ espionage.news.340.a:0 "Die Verhörer verhaften!"
+ 
+ espionage.news.341.t:0 "Militärindustrie durch verdeckte Aktionen gestört!"
+ espionage.news.341.desc:0 "Einer ausländischen Macht ist es gelungen, unsere Militärindustrie mit auf unserem Boden befindlichen Spionen teilweise zu stören. Einige unserer Fabriken wurden beschädigt. Der Bau neuer Militärfabriken varlangsamt sich für 45 Tage. Wir müssen reagieren!"
+ espionage.news.341.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen?"
+ 
+ espionage.news.342.t:0 "Produktion durch verdeckte Aktionen sabotiert!"
+ espionage.news.342.desc:0 "Einer ausländischen Macht ist es gelungen, unsere Waffenproduktion mit auf unserem Boden befindlichen Spionen teilweise zu sabotieren. Die Produktion neuer Waffen wird für 45 Tage verlangsamt. Wir müssen reagieren!"
+ espionage.news.342.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen und Blankwaffen verteilen?"
+ 
+ espionage.news.343.t:0 "Ressourcenproduktion durch verdeckte Aktionen sabotiert!"
+ espionage.news.343.desc:0 "Einer ausländischen Macht ist es gelungen, unsere Ressourcenproduktion mit auf unserem Boden befindlichen Spionen teilweise zu sabotieren. Die Produktion von Ressourcen wird für 45 Tage um 20% reduziert. Wir müssen reagieren!"
+ espionage.news.343.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen und nachhaltiger produzieren?"
+ 
+ espionage.news.344.t:0 "Rekrutierungsbemühungen durch verdeckte Aktionen sabotiert!"
+ espionage.news.344.desc:0 "Einer ausländischen Macht ist es gelungen, unsere Rekrutierungsbemühungen mit auf unserem Boden befindlichen Spionen teilweise zu sabotieren. Die Rekrutierung wird für 45 Tage verringert. Wir müssen reagieren!"
+ espionage.news.344.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen und wieder schanghaien?"
+ 
+ espionage.news.345.t:0 "Militärische Planung durch verdeckte Aktionen sabotiert!"
+ espionage.news.345.desc:0 "Eine ausländische Macht sabotiert unsere militärischen Planungen und reduziert damit das Ausmaß unserer strategischen Fähigkeiten. Unser Plan für die nächsten 3 Monate ist gefährdet. Wir arbeiten an neuen Plänen, die nicht noch einmal gefährdet werden dürfen."
+ espionage.news.345.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen und Pläne auf Papier verbieten?"
+ 
+ espionage.news.346.t:0 "Versorgungslinien durch verdeckte Aktionen sabotiert"
+ espionage.news.346.desc:0 "Eine ausländische Macht unterbricht unsere Versorgungslinien und reduziert die Effektivität des gesamten Prozesses. Einige Versorgungswege sind beeinträchtigt, was zu Verschwendung und Langsamkeit in unserem Versorgungssystem führt."
+ espionage.news.346.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen und die Soldaten Kartoffeln anbauen lassen?"
+ 
+ espionage.news.347.t:0 "Flugradar durch verdeckte Aktionen sabotiert"
+ espionage.news.347.desc:0 "Eine ausländische Macht blockiert derzeit unsere Flugradaranlagen und erhöht damit die Unfallwahrscheinlichkeit. Wir schlagen vor, dass wir unsere Luftmissionen für die nächsten 60 Tage reduzieren, bis wir eine Lösung finden."
+ espionage.news.347.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen und Ferngläser verteilen?"
+ 
+ espionage.news.348.t:0 "Der Feind unterstützt Widerstand in unserem Staat!"
+ espionage.news.348.desc:0 "Eine ausländische Macht unterstützt derzeit den lokalen Widerstand und destabilisiert unser Land. Wir müssen die Präsenz von Militärpolizei in den besetzten Gebieten für die nächsten 60 Tage zu verstärken, bis wir eine Lösung finden."
+ espionage.news.348.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen?"
+ 
+ espionage.news.349.t:0 "Der Feind vergiftet unsere Truppe!"
+ espionage.news.349.desc:0 "Eine ausländische Macht vergiftet derzeit die Verpflegung unserer Truppe. Einige Soldaten und vor allem unsere Generäle leiden an merkwürdigen Magenkrämpfen und sind für 60 Tage krank geschrieben. Wir verteilen ab sofort Gegengift über das Trinkwasser und die Schnapsrationen!"
+ espionage.news.349.a:0 "Vielleicht sollten wir die Spionageeffizienz und die Schnapsrationen erhöhen?"
+ 
+ espionage.news.350.t:0 "Pazifisten kollaborieren mit ausländischen Spionen!"
+ espionage.news.350.desc:0 "Eine ausländische Macht unterstützt derzeit die Pazifisten in unserem Land! Unsere Analysen deuten darauf hin, dass das Ziel die Verringerung der Kriegsunterstützung und die Verlangsamung der Mobilisierung ist. Was sollen wir tun? "
+ espionage.news.350.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen und mehr Pazifisten rekrutieren?"
+ 
+ espionage.news.351.t:0 "Der Feind sabotiert unsere Forschung!"
+ espionage.news.351.desc:0 "Eine ausländische Macht sabotiert derzeit unsere Forschung! Wichtige Forschungsergebnisse wurden schon durch ausländische Spione unbrauchbar gemacht. Einige Wissenschaftler werden erpresst und gehen in den Ruhestand. Wir müssen reagieren!"
+ espionage.news.351.a:0 "Vielleicht sollten wir unsere Spionageeffizienz erhöhen und die Pensionen für Wissenschaftler kürzen?"
+ 
+ espionage.news.352.t:0 "Der Feind sät politische Unzufriedenheit!"
+ espionage.news.352.desc:0 "Eine ausländische Macht sät derzeit politische Unzufriedenheit in unserem Land. Unser politischer Prozess wird gestört, indem einige unserer politischen Führer in den Ruhestand erpresst und andere ermordet werden. Wir müssen reagieren."
+ espionage.news.352.a:0 "Wer Wind sät, wird Sturm ernten! Vielleicht sollten wir aber trotzdem unsere Spionageeffizienz erhöhen?"
+ 
+ espionage.news.353.t:0 "Infiltration in [From.GetName] erfolgreich!"
+ espionage.news.353.desc:0 "Unser Spion, der nach [From.GetName] geschickt wurde, hat seinen Zielort erreicht und infiltriert derzeit die [From.GetAdjective] Regierung. Er erstattet täglich Bericht über Industrie und Militär an unser Spionagehauptquartier."
+ espionage.news.353.a:0 "Ihm soll ein Orden verliehen werden!"
+ 
+ espionage.news.354.t:0 "Widerstandsgruppen in [From.From.GetName] verhaftet!"
+ espionage.news.354.desc:0 "Widerstandsgruppen in [From.From.GetName], die von [From.GetName] finanziert und unterstützt wurden, haben versucht, einen verdeckten Plan im Staat durchzuführen: Sie wurden aber von unseren hoch qualifizierten Agenten in der Region entdeckt und verhaftet."
+ espionage.news.354.a:0 "Sie werden dafür bezahlen!"
+ 
+ espionage.news.355.t:0 "Widerstandsgruppen in [From.From.GetName] aktiv!"
+ espionage.news.355.desc:0 "Widerstandsgruppen, die von einer ausländischen Organisation in [From.From.GetName] finanziert und unterstützt werden, haben sich durchgesetzt und erfolgreich einen feindlichen Plan im Staat durchgeführt, der die gesamte Infrastruktur in der Region beschädigt hat."
+ espionage.news.355.a:0 "Alle füsilieren!"
+ 
+ espionage.news.356.t:0 "Widerstandsgruppen in [From.From.GetName] erfolgreich!"
+ espionage.news.356.desc:0 "Widerstandsgruppen, die wir in [From.From.GetName] finanziert und unterstützt haben, haben unseren Plan erfolgreich durchgeführt und die Infrastruktur des Gegners beschädigt. Die [From.GetAdjective] Regierung hat keine Ahnung, dass wir die Partei hinter dem Angriff sind. Wir müssen diese Gelegenheit nutzen, um weitere Schritte zu unternehmen."
+ espionage.news.356.a:0 "Großartig!"
+
+ espionage.news.357.t:0 "Widerstandsgruppen in [From.From.GetName] erfolgreich!"
+ espionage.news.357.desc:0 "Widerstandsgruppen, die wir in [From.From.GetName] finanziert und unterstützt haben, haben unseren Plan erfolgreich durchgeführt und alle Luftstützpunkte des Gegners beschädigt. Die [From.GetAdjective] Regierung hat keine Ahnung, dass wir die Partei hinter dem Angriff sind. Wir müssen diese Gelegenheit nutzen, um weitere Schritte zu unternehmen."
+ espionage.news.357.a:0 "Großartig!"
+ 
+ espionage.news.358.t:0 "Widerstandsgruppen in [From.From.GetName] erfolgreich!"
+ espionage.news.358.desc:0 "Widerstandsgruppen, die wir in [From.From.GetName] finanziert und unterstützt haben, haben unseren Plan erfolgreich durchgeführt und alle Luftstützpunkte des Gegners beschädigt. Die [From.GetAdjective] Regierung hat keine Ahnung, dass wir die Partei hinter dem Angriff sind. Wir müssen diese Gelegenheit nutzen, um weitere Schritte zu unternehmen."
+ espionage.news.358.a:0 "Großartig!"
+ 
+ espionage.news.359.t:0 "Widerstandsgruppen in [From.From.GetName] aufgeflogen!"
+ espionage.news.359.desc:0 "Widerstandsgruppen, die wir in [From.From.GetName] finanziert und unterstützt haben konnten unseren Plan nicht erfolgreich durchführen. Die Regierung [From.GetAdjective] hat den Plan zuvor entdeckt und alle beteiligten Elemente verhaftet. Sie sind sich auch unserer Unterstützung für die Widerstandsgruppen in ihrem Land bewusst. Das könnte diplomatische Auswirkungen auf uns haben."
+ espionage.news.359.a:0 "Vielleicht sollten wir das nächste Mal besser planen oder GAR NICHT planen!"
+ 
+ espionage.news.360.t:0 "Geisterhaftes Signal aufgefangen!"
+ espionage.news.360.desc:0 "Wir haben ein unbekanntes Geistersignal in unserer Kommunikation abgefangen. Unsere Analysten konnten die Art des Signals bisher nicht identifizieren."
+ espionage.news.360.a:0 "X-Akte eröffnen!"
+ 
+ espionage.news.361.t:0 "Feindliche Infiltration abgewehrt!"
+ espionage.news.361.desc:0 "Wir haben Mitteilungen des [From.GetAdjective] Geheimdienstes abgefangen. Sie enthüllten ihren Plan, unser Land zu infiltrieren und ihrer Führung tägliche Berichte über unsere industriellen und militärischen Daten zu liefern. Dank unseres großartigen Geheimdienstes haben wir diese Versuche abgewehrt und alle Beteiligten verhaftet."
+ espionage.news.361.a:0 "Sie werden dafür bezahlen!"
+ 
+ espionage.news.362.t:0 "Infiltration von [From.GetName] gescheitert!"
+ espionage.news.362.desc:0 "[From.GetAdjective] Geheimdienste haben unsere Mitteilungen abgefangen und unseren Plan enthüllt, ihr Land zu infiltrieren. Alle Beteiligten wurden verhaftet. Leider sind sie sich auch der Quelle und Identität der beteiligten Spione bewusst und setzen uns so möglichen diplomatischen Auswirkungen auf [From.GetName] aus."
+ espionage.news.362.a:0 "Oh mein Gott!"
+ 
+ espionage.news.363.t:0 "Infiltration abgebrochen! "
+ espionage.news.363.desc:0 "Unser Infiltrationsteam wurde während der Operation entdeckt und verhaftet. Möglicherweise sind unsere Kommunikationskanäle kompromittiert. Wir schlagen vor, die Spionageeffizienz zu erhöhen und bessere Ver- und Entschlüsselungstechnologien zu erforschen."
+ espionage.news.363.a:0 "Verdammt!!"
+ 
+ espionage.news.364.t:0 "Widerstandsgruppen in [From.From.GetName] aktiv!"
+ espionage.news.364.desc:0 "Widerstandsgruppen, die von einer ausländischen Organisation in [From.From.GetName] finanziert und unterstützt werden, haben sich durchgesetzt und erfolgreich einen feindlichen Plan im Staat durchgeführt. Alle unsere Luftstützpunkte in der Region wurden beschädigt."
+ espionage.news.364.a:0 "Wir müssen den Widerstand zerschlagen!"
+ 
+ espionage.news.365.t:0 "Widerstandsgruppen in [From.From.GetName] aktiv!"
+ espionage.news.365.desc:0 "Widerstandsgruppen, die von einer ausländischen Organisation in [From.From.GetName] finanziert und unterstützt werden, haben sich durchgesetzt und erfolgreich einen feindlichen Plan im Staat durchgeführt. Alle unsere Radarstationen in der Region wurden beschädigt."
+ espionage.news.365.a:0 "Wir müssen den Widerstand zerschlagen und Ferngläser austeilen!"
+ 
+ espionage.news.366.t:0 "Politische Unzufriedenheit zu Hause!"
+ espionage.news.366.desc:0 "Eine ausländische Macht sät derzeit politische Unzufriedenheit in unserem Land. Sie finanzieren und unterstützen oppositionelle Elemente und erpressen Mitglieder unserer Regierungspartei. Unser Pressesprecher hat eine Pressekonferenz abgehalten und mit Vergeltung gedroht."
+ espionage.news.366.a:0 "Wer war das?"
+ 
+ 
+display_country_name:0 "[GetCountryName]"
+GER_Target_name:0 "[GER_Target.GetName]"
+ENG_Target_name:0 "[ENG_Target.GetName]"
+FRA_Target_name:0 "[FRA_Target.GetName]"
+TUR_Target_name:0 "[TUR_Target.GetName]"
+USA_Target_name:0 "[USA_Target.GetName]"
+JAP_Target_name:0 "[JAP_Target.GetName]"
+ITA_Target_name:0 "[ITA_Target.GetName]"
+SOV_Target_name:0 "[SOV_Target.GetName]"
+Target1_name:0 "[target1.GetName]"
+Target2_name:0 "[target2.GetName]"
+Target3_name:0 "[target3.GetName]"
+Target4_name:0 "[target4.GetName]"
+Target5_name:0 "[target5.GetName]"
+Target6_name:0 "[target6.GetName]"
+Target7_name:0 "[target7.GetName]"
+Target8_name:0 "[target8.GetName]"
+Target9_name:0 "[target9.GetName]"
+Target10_name:0 "[target10.GetName]"
+Training_Efficiency:0 "+[?training_efficiency]%§! Spionageffizienz"
+Training_Efficiency_green:0 "§G+[?training_efficiency]%§! Spionageeffizienz"
+War_Propaganda_Weekly:0 "+[?war_propaganda_weekly]%§! Kriegspropaganda"
+War_Propaganda_Weekly_green:0 "§G+[?war_propaganda_weekly]%§! Kriegspropaganda"
+Spy_Research_Aid:0 "+[?spy_research_bonus]%§! Forschungsbonus"
+Spy_Research_Aid_green:0 "§G+[?spy_research_bonus]%§! Forschungsbonus"
+Suppress_Resistance:0 "-[?suppress_resistance_effect]%§! Widerstandseffekte"
+Suppress_Resistance_green:0 "§G-[?suppress_resistance_effect]%§! Widerstandseffekte"
+Freiwillige:0 "+[?Freiwillige_effect]%§! Zusätzliche Freiwillige"
+Freiwillige_green:0 "§G+[?Freiwillige_effect]%§! Zusätzliche Freiwillige"
+Encryption_selected:0 "§G+10%§! Verschlüsselung"
+Decryption_Selected:0 "§G+10%§! Entschlüsselung"
+
+
+

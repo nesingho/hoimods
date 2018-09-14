@@ -1,0 +1,333 @@
+scripted_gui = {
+
+
+
+	dfssdfddf = {
+		context_type = player_context
+		
+		window_name = "btrgmprs_window_main"
+		
+		visible = {
+			always = yes
+		}
+
+		effects = {
+		    btrgmprs_window_main_open_click = {
+		        set_temp_variable = { btrgmprs_show_main = 1 }
+		        subtract_from_temp_variable = { btrgmprs_show_main = btrgmprs_main_show }
+		        set_variable = { btrgmprs_main_show = btrgmprs_show_main }
+		    }
+		    btrgmprs_window_trade_open_click = {
+		        set_temp_variable = { btrgmprs_trade_show = 1 }
+		        subtract_from_temp_variable = { btrgmprs_trade_show = btrgmprs_show_trade }
+		        set_variable = { btrgmprs_show_trade = btrgmprs_trade_show }
+		    }
+
+		}
+
+	}
+
+
+	
+
+
+	dfssdfd = {
+		context_type = player_context
+		
+		window_name = "btrgmprs_window"
+		
+		visible = {
+			check_variable = { btrgmprs_main_show = 1 }
+		}
+
+		effects = {
+		    btrgmprs_stockpile_trade_open_click = {
+		        set_temp_variable = { btrgmprs_trade_show = 1 }
+		        subtract_from_temp_variable = { btrgmprs_trade_show = btrgmprs_show_trade }
+		        set_variable = { btrgmprs_show_trade = btrgmprs_trade_show }
+		    }
+
+		    btrgmprs_close_main_click = {
+		        set_temp_variable = { btrgmprs_show_main = 1 }
+		        subtract_from_temp_variable = { btrgmprs_show_main = btrgmprs_main_show }
+		        set_variable = { btrgmprs_main_show = btrgmprs_show_main }
+		    }
+		
+
+		}
+
+	}
+
+
+	fuhrer_mana_country_powersdffd = {
+		context_type = player_context
+		
+		window_name = "btrgmprs_trade_container"
+
+		visible = {
+			check_variable = { btrgmprs_show_trade = 1 }
+		}
+		
+        
+			effects = {
+
+
+
+				btrgmprs_close_trade_click = {
+					set_variable = { btrgmprs_show_trade = 0 }
+	            }
+
+				btrgmprs_sell_stock_oil_click = {
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_oil}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					check_variable = { stockpile_oil > 999 }
+					    }
+						subtract_from_variable = { stockpile_oil = 1000}
+						add_to_variable = { global.oil_stock = 1000}
+						add_to_variable = { stockpile_money = money_need}
+						add_to_variable = { stockpile_money = 1}
+					}
+	            }
+				btrgmprs_buy_stock_oil_click = {
+
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_oil}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					AND = {
+	    						check_variable = { global.oil_stock > 999 }
+	    						check_variable = { money_need < stockpile_money }
+					    	}
+					    }
+						subtract_from_variable = { global.oil_stock = 1000}
+						add_to_variable = { stockpile_oil = 1000}
+						subtract_from_variable = { stockpile_money = money_need}
+						subtract_from_variable = { stockpile_money = 1}
+					}
+	            }
+
+
+
+				btrgmprs_sell_stock_rubber_click = {
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_rubber}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					check_variable = { stockpile_rubber > 999 }
+					    }
+						subtract_from_variable = { stockpile_rubber = 1000}
+						add_to_variable = { global.rubber_stock = 1000}
+						add_to_variable = { stockpile_money = money_need}
+						add_to_variable = { stockpile_money = 1}
+					}
+	            }
+				btrgmprs_buy_stock_rubber_click = {
+
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_rubber}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					AND = {
+	    						check_variable = { global.rubber_stock > 999 }
+	    						check_variable = { money_need < stockpile_money }
+					    	}
+					    }
+						subtract_from_variable = { global.rubber_stock = 1000}
+						add_to_variable = { stockpile_rubber = 1000}
+						subtract_from_variable = { stockpile_money = money_need}
+						subtract_from_variable = { stockpile_money = 1}
+					}
+	            }
+
+
+				btrgmprs_sell_stock_steel_click = {
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_steel}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					check_variable = { stockpile_steel > 999 }
+					    }
+						subtract_from_variable = { stockpile_steel = 1000}
+						add_to_variable = { global.steel_stock = 1000}
+						add_to_variable = { stockpile_money = money_need}
+						add_to_variable = { stockpile_money = 1}
+					}
+	            }
+				btrgmprs_buy_stock_steel_click = {
+
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_steel}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					AND = {
+	    						check_variable = { global.steel_stock > 999 }
+	    						check_variable = { money_need < stockpile_money }
+					    	}
+					    }
+						subtract_from_variable = { global.steel_stock = 1000}
+						add_to_variable = { stockpile_steel = 1000}
+						subtract_from_variable = { stockpile_money = money_need}
+						subtract_from_variable = { stockpile_money = 1}
+					}
+	            }
+
+
+
+				btrgmprs_sell_stock_aluminum_click = {
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_aluminum}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					check_variable = { stockpile_aluminum > 999 }
+					    }
+						subtract_from_variable = { stockpile_aluminum = 1000}
+						add_to_variable = { global.aluminum_stock = 1000}
+						add_to_variable = { stockpile_money = money_need}
+						add_to_variable = { stockpile_money = 1}
+					}
+	            }
+				btrgmprs_buy_stock_aluminum_click = {
+
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_aluminum}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					AND = {
+	    						check_variable = { global.aluminum_stock > 999 }
+	    						check_variable = { money_need < stockpile_money }
+					    	}
+					    }
+						subtract_from_variable = { global.aluminum_stock = 1000}
+						add_to_variable = { stockpile_aluminum = 1000}
+						subtract_from_variable = { stockpile_money = money_need}
+						subtract_from_variable = { stockpile_money = 1}
+					}
+	            }
+
+
+
+
+
+				btrgmprs_sell_stock_tungsten_click = {
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_tungsten}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					check_variable = { stockpile_tungsten > 999 }
+					    }
+						subtract_from_variable = { stockpile_tungsten = 1000}
+						add_to_variable = { global.tungsten_stock = 1000}
+						add_to_variable = { stockpile_money = money_need}
+						add_to_variable = { stockpile_money = 1}
+					}
+	            }
+				btrgmprs_buy_stock_tungsten_click = {
+
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_tungsten}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					AND = {
+	    						check_variable = { global.tungsten_stock > 999 }
+	    						check_variable = { money_need < stockpile_money }
+					    	}
+					    }
+						subtract_from_variable = { global.tungsten_stock = 1000}
+						add_to_variable = { stockpile_tungsten = 1000}
+						subtract_from_variable = { stockpile_money = money_need}
+						subtract_from_variable = { stockpile_money = 1}
+					}
+	            }
+
+
+
+
+				btrgmprs_sell_stock_chromium_click = {
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_chromium}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					check_variable = { stockpile_chromium > 999 }
+					    }
+						subtract_from_variable = { stockpile_chromium = 1000}
+						add_to_variable = { global.chromium_stock = 1000}
+						add_to_variable = { stockpile_money = money_need}
+						add_to_variable = { stockpile_money = 1}
+					}
+	            }
+				btrgmprs_buy_stock_chromium_click = {
+
+					set_temp_variable = {money_need=0}
+					add_to_temp_variable = {money_need = 1000}
+					multiply_temp_variable = {money_need = global.btrgmprs_cost_chromium}
+					subtract_from_temp_variable = { money_need = 1}
+
+	                if = {
+						limit = {
+	    					AND = {
+	    						check_variable = { global.chromium_stock > 999 }
+	    						check_variable = { money_need < stockpile_money }
+					    	}
+					    }
+						subtract_from_variable = { global.chromium_stock = 1000}
+						add_to_variable = { stockpile_chromium = 1000}
+						subtract_from_variable = { stockpile_money = money_need}
+						subtract_from_variable = { stockpile_money = 1}
+					}
+	            }
+
+
+			}
+	
+}
+
+
+
+
+
+    
+
+
+}
+
+
+
+
+
+
+ 

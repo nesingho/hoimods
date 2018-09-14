@@ -1,0 +1,37 @@
+scripted_gui = {
+
+	Mission_Confirmation = {
+		context_type = player_context
+		
+		window_name = "Mission_Confirmation_container"
+		
+		visible={
+		check_variable = { show_Mission_Confirmation = 1 }
+
+		}
+		
+
+		effects = {
+            mission_confirmation_ok_click = {
+				set_variable = { show_Mission_Confirmation = 0 }
+			}
+		}
+		
+		ai_max_weight_taken_per_test = 1
+		
+		
+		ai_weights = {
+       mission_confirmation_ok_click = {
+        weight = 1
+		
+		ai_will_do = {
+		
+            factor = 1
+
+        }}}
+		
+		
+	}
+    
+}
+

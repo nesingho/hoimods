@@ -1,0 +1,618 @@
+scripted_gui = {
+
+	Spy_Menu_Window = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+	
+		
+		window_name = "Spy_Menu_Window_container"
+		visible={
+		check_variable = { ROOT.show_Spy_Menu@PREV = 1 }
+		}
+		
+		effects = {
+			Disrupt_Civilian_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.334 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.334 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.334 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.334 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.334 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}	 
+
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			
+
+			}
+
+
+
+			Disrupt_Military_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.341 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.341 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.341 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.341 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.341 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}	 
+
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			}
+			
+			Sabotage_Production_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.342 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.342 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.342 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.342 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.342 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}	 
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			
+			
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			}
+		
+			
+			Sabotage_Extraction_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.343 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.343 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.343 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.343 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.343 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.343 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			}
+			
+			
+			Sabotage_Recruitment_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.344 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.344 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.344 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.344 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.344 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.344 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			}
+			
+			Sabotage_Planning_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.345 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.345 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.345 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.345 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.345 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.345 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+
+			}
+		
+		
+		    Disrupt_Supply_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.346 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.346 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.346 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.346 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.346 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.346 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}			
+
+			}
+
+			Jam_Radar_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.347 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.347 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.347 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.347 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.347 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}	
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.347 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			
+			}
+			
+			Support_Resistance_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.348 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.348 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.348 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.348 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.348 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.348 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			
+			}
+			
+			
+			
+			Poison_Food_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.349 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.349 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.349 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.349 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.349 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.349 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			
+			}
+						
+			Support_Pacifists_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.350 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.350 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.350 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.350 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.350 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.350 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			
+			}
+			
+			
+			Sabotage_Research_click  = {
+			
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.351 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.351 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.351 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.351 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.351 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.351 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+			
+			}
+			
+			
+			Infiltrate_click  = {
+	       
+		   set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.360 days = 2 }} 90 = { news_event = { id = espionage.news.361 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.360 days = 2 }} 50 = { news_event = { id = espionage.news.361 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.360 days = 2 }} 40 = { news_event = { id = espionage.news.361 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.360 days = 2 }} 20 = { news_event = { id = espionage.news.361 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.360 days = 2 }} 10 = { news_event = { id = espionage.news.36 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.360 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}					
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 150}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+
+			
+				}
+				
+				
+				
+	            
+	
+            Sow_Discontent_click  = {
+                
+			set_temp_variable = { temp1 = ROOT.Spy_Efficiency}
+			subtract_from_temp_variable = {temp1 = Spy_Efficiency}
+			set_variable = {spy_difference = temp1}
+			
+			
+			if = { limit =  { check_variable = {spy_difference < 0 }}
+			random_list = {10 = { news_event = { id = espionage.news.366 days = 2 }} 90 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 0 }}
+			random_list = {50 = { news_event = { id = espionage.news.366 days = 2 }} 50 = { news_event = { id = espionage.news.335 days = 2}  }}}
+		    else_if = { limit =  { check_variable = {spy_difference > 5 }}
+			random_list = {60 = { news_event = { id = espionage.news.366 days = 2 }} 40 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 10 }}
+			random_list = {80 = { news_event = { id = espionage.news.366 days = 2 }} 20 = { news_event = { id = espionage.news.335 days = 2}  }}}
+			else_if = { limit =  { check_variable = {spy_difference > 20 }}
+			random_list = {90 = { news_event = { id = espionage.news.366 days = 2 }} 10 = { news_event = { id = espionage.news.335 days = 2}  }}}	
+			else_if = { limit =  { check_variable = {spy_difference = 0 }}
+			random_list = {40 = { news_event = { id = espionage.news.366 days = 2 }} 60 = { news_event = { id = espionage.news.335 days = 2}  }}}			
+ 			set_country_flag =  { flag = Spy_Action_Attempted days = 30 value = 1 }
+			
+			ROOT = { subtract_from_variable = {spies_available = 100}}
+			ROOT = {
+			if = { limit = {NOT = {is_ai = yes}}
+			set_variable = {show_Mission_Confirmation = 1}}
+			}
+
+				
+
+				}
+	
+			exitbutton_click = {
+				set_variable = { ROOT.show_Spy_Menu@PREV = 0 }
+			}
+		}
+		
+
+		triggers = { 
+		Disrupt_Civilian_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Disrupt_Military_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Sabotage_Production_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Sabotage_Extraction_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Sabotage_Recruitment_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Sabotage_Planning_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Disrupt_Supply_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Jam_Radar_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Support_Resistance_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Poison_Food_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Support_Pacifists_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Sabotage_Research_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Sow_Discontent_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 99 }}
+		Infiltrate_click_enabled = { NOT = { has_country_flag = Spy_Action_Attempted }
+		                                   check_variable = {ROOT.spies_available > 149 }}										   
+		
+		
+		}
+		
+		
+		
+		
+		ai_enabled = {
+            always = yes
+        }
+
+        ai_check = {
+            check_variable = { ROOT.spies_available > 99 }
+        }
+        
+        ai_test_interval = 1500
+        ai_test_variance = 0.3
+        ai_test_scopes = test_neighbouring_countries
+        ai_test_scopes = test_enemy_countries
+		
+		ai_check_scope = {
+        check_variable = {ROOT.opinion@PREV < 0}
+        check_variable = {num_of_factories > 30} }                      
+        ai_max_weight_taken_per_test = 10
+		
+        ai_weights = {
+
+        Disrupt_Civilian_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+						 modifier = {has_war = no
+						 add = 10}
+                              }
+                          }        
+        Disrupt_Military_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+						 	 modifier = {has_war = no
+						 add = 10}
+                              }
+                          } 
+        Sabotage_Production_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+						 	 modifier = {has_war = no
+						 add = 10}
+                              }
+                          } 
+        Sabotage_Extraction_click = {
+               weight = 10
+                 ai_will_do = {
+				 	 modifier = {has_war = no
+						 add = 10}
+                         factor = 1
+                              }
+                          }  						  
+        Sabotage_Recruitment_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+				modifier = {has_war = no
+						 add = 10}
+                              }
+                          }  
+        Sabotage_Planning_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+						 modifier = {has_war = yes
+						 add = 10}
+                              }
+                          }
+
+        Disrupt_Supply_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+						 modifier = {has_war = yes
+						 add = 10}
+                              }
+                          } 	
+        Jam_Radar_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+						 modifier = {has_war = yes
+						 add = 10}
+                              }
+                          } 	
+        Support_Resistance_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+						 modifier = {has_war = yes
+						 add = 10}
+                              }
+                          }	
+        Poison_Food_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+						 modifier = {has_war = yes
+						 add = 10}
+                              }
+                          }	
+        Support_Pacifists_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+                              }
+                          }		
+
+        Sabotage_Research_click = {
+               weight = 10
+                 ai_will_do = {
+                         factor = 1
+                              }
+                          }	
+        Sow_Discontent_click = {
+               weight = 10
+                 ai_will_do = {
+				 modifier = {has_war = no
+						 add = 10}
+                         factor = 1
+                              }
+                          }		
+
+        Infiltrate_click = {
+               weight = 15
+                 ai_will_do = {
+                         factor = 1
+                              }
+                          }							  
+
+	
+		
+			}
+			 
+			 
+		
+		
+		}
+
+	
+}
+	
+	
+	
+	

@@ -1,0 +1,225 @@
+﻿l_english:
+SPIES_TOOLTIP:0 "You have [?spies_display] £spy available.\n\nYou recruit [?dm] £spy per month."
+ SPY_EFFICIENCY_TOOLTIP:0 "Your Spy Efficiency is currently at §H[?Spy_Efficiency]%§! \n\n§H[?Spy_Efficiency_Stability]%§! from Stability £stability_espionage.\n§H[?encryption_decryption_efficiency]%§! from Encryption & Decryption £decryption_espionage \n§H[?training_efficiency]%§! from Spy Training Programs £spy"
+ Spy_University:0 "Spy University"
+ Spy_University_desc:0 "This building provides the state with trained spies.\n\n§RYour Spy Recruitment will be capped at 5 £spy per day. Any universities built beyond this limit will not recruit any spies unless other universities are damaged."
+ SPY_MENU_TOOLTIP:0 "§HClick here to open the Covert Actions Menu.§!\n(If you are using Kaiserreich and want to check opinion values under this icon, click on the details tab below) \n§RThis Menu will NOT be viewable if you have the details tab in lieu of the diplomacy tab selected below.§!"
+ DISRUPT_CIVILIAN_TOOLTIP:0 "§GDisrupt Civilian Industry§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will damage a number of enemy civilian factories.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ DISRUPT_MILITARY_TOOLTIP:0 "§GDisrupt Military Industry§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will damage a number of enemy military factories.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ SABOTAGE_PRODUCTION_TOOLTIP:0 "§GSabotage Production§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will sabotage enemy's production, reducing its efficiency by §R15%§! for §R60§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ SABOTAGE_EXTRACTION_TOOLTIP:0 "§GSabotage Extraction§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will sabotage enemy's resource extraction, reducing its efficiency by §R15%§! for §R60§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ SABOTAGE_RECRUITMENT_TOOLTIP:0 "§GSabotage Recruitment§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will disrupt enemy's conscription process reducing it by §R5%§!.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ SABOTAGE_PLANNING_TOOLTIP:0 "§GSabotage Military Planning§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will disrupt enemy's military planned reducing its speed by §R30%§! and its maximum value by §R25%§! for §R90§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ DISRUPT_SUPPLY_TOOLTIP:0 "§GDisrupt Supply Lines§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will disrupt enemy's supply lines reducing reinforcement rate by §R5%§! and increasing supply consumption by §R10%§!, out of supply penalty by §R20%§! and attrition by §R10%§! for §R60§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ JAM_RADAR_TOOLTIP:0 "§GJam Aviation Radar System§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will disrupt enemy's aviation radar system, decreasing air superiority, air close attack and air close defense factors by §R10%§! each, and increasing air accidents factor, air night penalty and air weather penalty by §R20%§! each for §R60§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ POISON_FOOD_TOOLTIP:0 "§GSmuggle Poison in Food Supply§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will poison enemy's food supply giving their generals the trait §R"Sick"§! for §R60§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ SUPPORT_RESISTANCE_TOOLTIP:0 "§GSupport Resistance§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will increase resistance effects on the enemy by §R40%§! for §R60§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ SUPPORT_PACIFISTS_TOOLTIP:0 "§GSupport Pacifists§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will support pacifists call for peace and reduce enemy's weekly war support gain by §R-1%§!  and their mobilization speed by §R-30%§! for §R60§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ SABOTAGE_RESEARCH_TOOLTIP:0 "§GSabotage Research§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will sabotage enemy's research reducing its speed by §R15%§! for §R60§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ POLITICAL_DISCONTENT_TOOLTIP:0 "§GSow Political Discontent§!\n\nYou need 100 £spy to perform this covert action. §H\nThis action will sow political discontent in the enemy country, reducing their daily political power gain by §R25%§! for §R90§! days.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ INFILTRATE_TOOLTIP:0 "§GInfiltration§!\n\nYou need 150 £spy to perform this covert action. §H\nThis action will provide us with daily intel reports on the enemy, viewable in our Spy Agency Headquarters, §Rindefinitely§! until our spies are discovered. Infiltration will also allow us to study enemy technology and use it to our advantage.§! \nOnly §RONE§! covert action can be attempted on the same target within an interval of §R30§! days (by any country)."
+ 
+ LABORATORY_TOOLTIP:0 "Assign Spies to this Laboratory to study the technology of the country you are currently infiltrating and work on recreating their units for our use."
+ SPY_XP_TOOLTIP:0 "You currently have [?spy_xp] £spy_xp that you can use to unlock new espionage actions. You gain experience by attempting covert actions on foreign nations."
+ LEVEL_2_TOOLTIP:0 "You need 100 £spy_xp to unlock this level. \nThis level will unlock these espionage actions: \n§HWar Propaganda \n§HResearch Aid \n§HSuppress Resistance"
+ LEVEL_3_TOOLTIP:0 "You need 100 £spy_xp to unlock this level. \nThis level will unlock these espionage actions: \n§HFreiwillige Program \n§HInfiltration \nStudy Enemy Technology \nSet Agency Director Priority \nArm Resistance in Enemy States"
+ TRAINING_PROGRAMS_TOOLTIP:0 "You need 50 £spy_xp to unlock this mission. \n§HSpies assigned to this mission will work on maximizing your Spy Efficiency."
+ WAR_PROPAGANDA_TOOLTIP:0 "You need 50 £spy_xp to unlock this mission. \n§HYour Agency Director needs to be at least level 2. Spies assigned to this mission will work on spreading propaganda designed to increase war support across the nation."
+ RESEARCH_AID_TOOLTIP:0 "You need 50 £spy_xp to unlock this mission. \n§HYour Agency Director needs to be at least level 2. Spies assigned to this mission will work on gathering research intel from different countries and submit it to our research institutions to further our scientific progress."
+ WAR_PROPAGANDA_TOOLTIP:0 "You need 50 £spy_xp to unlock this mission. \n§HYour Agency Director needs to be at least level 2. Spies assigned to this mission will work on spreading propaganda designed to increase war support across the nation."
+ SUPPRESS_RESISTANCE_TOOLTIP:0 "You need 50 £spy_xp to unlock this mission. \n§HYour Agency Director needs to be at least level 2. Spies assigned to this mission will work on infiltrating and dismantling resistance factions inside our country."
+ FREIWILLIGE_PROGRAM_TOOLTIP:0 "You need 50 £spy_xp to unlock this mission.\n§HYour Agency Director needs to be at least level 3. Spies assigned to this mission will work on discovering and recruiting war enthusiasts who share our beliefs in non-core territories."
+ 
+ STUDY_TECHNOLOGY_SPIES_TOOLTIP:0 "Assign §H200§! £spy to work on studying your infiltration target's technology and accumulate research points that can be used to copy their unit models."
+ RESEARCH_POINTS_TOOLTIP:0 "You currently have §H[?research_points]§! £research_points available that can be used to recreate unit models of your current infiltration target.\nThese research points can §RONLY§! be used on this §Rspecific§! target."
+ LIGHT_ARMOR_TOOLTIP:0 "§HStudy Enemy Light Armor Technology§!\n\nYou need §H500§! £research_points to unlock this model.\nCurrent version available: §H[?enemy_light_armor_year]§! version\n\nThis action will §RONLY§! be possible if the enemy's technology level of this model is one level higher."
+ MEDIUM_ARMOR_TOOLTIP:0 "§HStudy Enemy Medium Armor Technology§!\n\nYou need §H500§! £research_points to unlock this model.\nCurrent version available: §H[?enemy_medium_armor_year]§! version\n\nThis action will §RONLY§! be possible if the enemy's technology level of this model is one level higher."
+ HEAVY_ARMOR_TOOLTIP:0 "§HStudy Enemy Heavy Armor Technology§!\n\nYou need §H500§! £research_points to unlock this model.\nCurrent version available: §H[?enemy_heavy_armor_year]§! version\n\nThis action will §RONLY§! be possible if the enemy's technology level of this model is one level higher."
+ FIGHTER_TOOLTIP:0 "§HStudy Enemy Fighters Technology§!\n\nYou need §H500§! £research_points to unlock this model.\nCurrent version available: §H[?enemy_fighter_year]§! version\n\nThis action will §RONLY§! be possible if the enemy's technology level of this model is one level higher."
+ CAS_TOOLTIP:0 "§HStudy Enemy Close Air Support Technology§!\n\nYou need §H500§! £research_points to unlock this model.\nCurrent version available: §H[?enemy_CAS_year]§! version\n\nThis action will §RONLY§! be possible if the enemy's technology level of this model is one level higher."
+ STRATEGIC_BOMBER_TOOLTIP:0 "§HStudy Enemy Strategic Bomber Technology§!\n\nYou need §H500§! £research_points to unlock this model.\nCurrent version available: §H[?enemy_strategic_bomber_year]§! version\n\nThis action will §RONLY§! be possible if the enemy's technology level of this model is one level higher."
+ ARM_RESISTANCE_TOOLTIP:0 "Click on this button to Arm Resistance in §H[From.GetName]§!.\n\nResistance strength has to be currently positive in this state for this menu to be accessible."
+ INCREASE_ARM_RESISTANCE_TOOLTIP:0 "Increase quantity of equipment to be sent by §H1,000§!.\nEach thousand of equipment sent increases the operation success factor by §G10§!."
+ DECREASE_ARM_RESISTANCE_TOOLTIP:0 "Decrease quantity of equipment to be sent by §H1,000§!."
+ 
+ CANCEL_INFILTRATION_TOOLTIP:0 "Click on this button to recall your infiltration envoy from your target.\n\n§H150§! £spy will return home."
+
+ ENHANCED_TOOLTIP:0 "§H70%§! chance of uncovering the party behind the Covert Action."
+ 
+ SEND_TOOLTIP:0 "You do §Rnot§! have an operation target selected!"
+ SEND_EXP_TOOLTIP:0 "This action requires §H100§! £spy\n\nYour operation success chance will depend on your Spy Efficiency, Enemy's Spy Efficiency, current Resistance Strength in §H[From.GetName]§! and success factor from the quantity of equipment sent."
+ 
+ HQ_TOOLTIP:0 "Click on this button to access your Spy Agency Headquarters"
+ 
+ SPIES_RETURN_TOOLTIP:0 "Operation Ends:\n§H100§! £spy return home\nWe gain §H35§! £spy_xp"
+ XP_GAIN_TOOLTIP:0 "We gain §H35§! £spy_xp"
+ 
+ espionage.news.334.t:0 "Civilian Industry disrupted by Covert Actions!"
+ espionage.news.334.desc:0 "A foreign entity managed to partially disrupt our civilian industry using their spies currently present on our soil. This may have resulted in having some of our factories damaged. This will also slow down construction of new civilian factories for 45 days. We need to react!"
+ espionage.news.334.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ 
+ espionage.news.335.t:0 "We have Repelled a foreign Covert Action!"
+ espionage.news.335.desc:0 "A Foreign Entity attempted to perform a covert action on our soil. But thanks to our great defence mechanism currently in place. We undercovered the plot and arrested all spies involved to be interrogated. So far they have refused to admit which country is behind the attack. What shall we do?!"
+ espionage.news.335.a:0 "Use Enhanced Interrogation Techniques!"
+ espionage.news.335.b:0 "Execute them!"
+  
+ espionage.news.336.t:0 "Operation successful in [From.GetName]!"
+ espionage.news.336.desc:0 "Our spies have successfully infiltrated the country of [From.GetName] and performed the Covert Action you asked for. The enemy has no knowledge of the party behind this attack, thanks to our high Spy Efficiency."
+ espionage.news.336.a:0 "More to come!"
+ 
+ espionage.news.337.t:0 "Operation has failed in [From.GetName]!"
+ espionage.news.337.desc:0 "In a surprising turn of events, [From.GetName] discovered our spies and arrested them. So far, our patriotic spies have not revealed that we are the party behind the attack. They are to be executed as a result. Our diplomats are working tirelessly to assure [From.GetName] that this attack has nothing to do with our government."
+ espionage.news.337.a:0 "Let's hope they believe that B.S!"
+ 
+ espionage.news.338.t:0 " Operation has failed in [From.GetName]!"
+ espionage.news.338.desc:0 "In a surprising turn of events, [From.GetName] discovered our spies and arrested them. The government chose to use Enhance Interrogation Techniques on them, which may uncover that we are the party behind the attack."
+ espionage.news.338.a:0 "Let's hope for the best!"
+ 
+ espionage.news.339.t:0 "Investigation: Conspirators Uncovered!"
+ espionage.news.339.desc:0 "As a result of the use of Enhanced Interrogation Techniques , the foreign spies admitted that [From.GetName] was behind some of the Covert Actions that recently took place on our soil."
+ espionage.news.339.a:0 "[From.GetName] will pay for this!"
+ 
+ espionage.news.340.t:0 "Investigation Failed!"
+ espionage.news.340.desc:0 "As a result of the use of Enhanced Interrogation Techniques, which might've been used a little bit excessively, most of the spies captured, died in our interrogation black site. As a result, we cannot determine who was behind the covert actions at this time."
+ espionage.news.340.a:0 "Maybe we will know in due time!"
+ 
+ espionage.news.341.t:0 "Military Industry disrupted by Covert Actions!"
+ espionage.news.341.desc:0 "A foreign entity managed to partially disrupt our military industry using their spies currently present on our soil. This may have resulted in having some of our factories damaged. This will also slow down construction of new military factories for 45 days. We need to react!  "
+ espionage.news.341.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.342.t:0 "Production Sabotaged by Covert Actions!"
+ espionage.news.342.desc:0 "A foreign entity managed to partially disrupt our arms production using their spies currently present on our soil.  This will also slow down production of new weaponry for 45 days. We need to react!  "
+ espionage.news.342.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.343.t:0 "Extraction Sabotaged by Covert Actions!"
+ espionage.news.343.desc:0 "A foreign entity managed to partially disrupt our extraction process using their spies currently present on our soil.  This will decrease our resource extraction efficiency by 20% for 45 days. We need to react!  "
+ espionage.news.343.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.344.t:0 "Recruitment Sabotaged by Covert Actions!"
+ espionage.news.344.desc:0 "A foreign entity managed to partially disrupt our recruitment process using their spies currently present on our soil.  This will decrease our ability to recruit efficiently for 45 days. We need to react!  "
+ espionage.news.344.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.345.t:0 "Military Planning Sabotaged by Covert Actions!"
+ espionage.news.345.desc:0 "A foreign entity is currently sabotaging our Military Planning, reducing the extent of our strategic capabilities. Our plan for the next 3 months has been compromised. We are working on new plans that must not be compromised again.  "
+ espionage.news.345.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.346.t:0 "Supply Lines Disrupted by Covert Actions!"
+ espionage.news.346.desc:0 "A foreign entity is currently disrupting our Supply Lines, reducing the effectiveness of the entire process. Some supply routes are compromised, thus resulting in waste and slowness in our supply system.  "
+ espionage.news.346.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.347.t:0 "Aviation Radars jammed by Covert Actions!"
+ espionage.news.347.desc:0 "A foreign entity is currently jamming our aviation radars, increasing likelihood of accidents. We suggest that we reduce our air missions for the next 60 days, until we find a solution. "
+ espionage.news.347.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.348.t:0 "Enemy Supporting Local Resistance"
+ espionage.news.348.desc:0 "A foreign entity is currently supporting local resistance, destabilizing our country. We suggest that we increase military police presence in occupied territories, if any, for the next 60 days, until we find a solution. "
+ espionage.news.348.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.349.t:0 "Enemy Poisoned Our Food Supply"
+ espionage.news.349.desc:0 "A foreign entity is currently supporting local resistance, destabilizing our country. We suggest that we increase military police presence in occupied territories, if any, for the next 60 days, until we find a solution. "
+ espionage.news.349.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.350.t:0 "Pacifists colluding with Foreign Spies"
+ espionage.news.350.desc:0 "A foreign entity is currently providing foreign aid to Pacifist Factions in our country. Our analysis indictates that this is intended to decrease war support and slow down mobilization. What Shall We Do? "
+ espionage.news.350.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.351.t:0 "Enemy Sabotaging Our Research"
+ espionage.news.351.desc:0 "A foreign entity is currently sabotaging our research. Some of our data is destroyed by foreign spies currently present on our soil. Some scientists are blackmailed into retiring. We need to react."
+ espionage.news.351.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.352.t:0 "Enemy Sowing Political Discontent"
+ espionage.news.352.desc:0 "A foreign entity is currently sowing political discontent in our country. Our political process is being disrupted with some of our political leaders being blackmailed into retirement and others assasinated. We need to react."
+ espionage.news.352.a:0 "Perhaps we should increase our Spy Efficiency?"
+ 
+ espionage.news.353.t:0 "Infiltration of [From.GetName] in Progress"
+ espionage.news.353.desc:0 "Our Intelligence Envoy sent to [From.From.GetName] has successfully reached its destination and is currently infiltrating the [From.GetAdjective] Government, providing us with daily reports on their industry and military data that we can review in our Spy Agency Headquarters."
+ espionage.news.353.a:0 "Great!"
+ 
+ espionage.news.354.t:0 "Resistance undermined in [From.From.GetName]"
+ espionage.news.354.desc:0 "Resistance factions in [From.From.GetName] that have been funded and supported by [From.GetName] have tried to conduct a covert plan in the state, but were discovered and arrested by our highly-trained agents in the region."
+ espionage.news.354.a:0 "[From.GetName] will pay for this!"
+ 
+ espionage.news.355.t:0 "Resistance prevailed in [From.From.GetName]"
+ espionage.news.355.desc:0 "Resistance factions funded and supported by a foreign entity in [From.From.GetName] have prevailed and successfully conducted enemy plan in the state, which damaged all of the infastructure in the region."
+ espionage.news.355.a:0 "We have to crush the resistance"
+ 
+ espionage.news.356.t:0 "Resistance prevailed in [From.From.GetName]"
+ espionage.news.356.desc:0 "Resistance factions that we have funded and supported in [From.From.GetName] have successfully conducted our plan and damaged the infrastructure in the state. The [From.GetAdjective] Government has no knowledge that we are the party behind the attack. We must seize this opportunity make further moves."
+ espionage.news.356.a:0 "Great!"
+
+ espionage.news.357.t:0 "Resistance prevailed in [From.From.GetName]"
+ espionage.news.357.desc:0 "Resistance factions that we have funded and supported in [From.From.GetName] have successfully conducted our plan and damaged all air bases in the state. The [From.GetAdjective] Government has no knowledge that we are the party behind the attack. We must seize this opportunity make further moves."
+ espionage.news.357.a:0 "Great!"
+ 
+ espionage.news.358.t:0 "Resistance prevailed in [From.From.GetName]"
+ espionage.news.358.desc:0 "Resistance factions that we have funded and supported in [From.From.GetName] have successfully conducted our plan and damaged all radars in the state. The [From.GetAdjective] Government has no knowledge that we are the party behind the attack. We must seize this opportunity make further moves."
+ espionage.news.358.a:0 "Great!"
+ 
+ espionage.news.359.t:0 "Resistance failed in [From.From.GetName]"
+ espionage.news.359.desc:0 "Resistance factions that we have funded and supported in [From.From.GetName] have failed to successfully conduct our plan in the state. The [From.GetAdjective] Government has discovered the plan beforehand and arrested all elements involved. They are also aware of our support to the resistance factions in their country. This might have diplomatic repercussions on us."
+ espionage.news.359.a:0 "Perhaps we shall plan better next time!"
+ 
+ espionage.news.360.t:0 "Ghost Signal Intercepted"
+ espionage.news.360.desc:0 "We have intercepted an unfamiliar ghost signal in our communications. Our analysts have failed to identify the nature of such signal so far. "
+ espionage.news.360.a:0 "We have to look into this!"
+ 
+ espionage.news.361.t:0 "Enemy Infiltration Repelled"
+ espionage.news.361.desc:0 "We have intercepted communications from the [From.GetAdjective] intelligence agency unveiling their plan to infiltrate our country and provide their leadership with daily reports on our industrial and military data. Thanks to our great defense mechanism currently in place, we have repelled such attempts and arrested everyone involved."
+ espionage.news.361.a:0 "[From.GetName] will pay for this!"
+ 
+ espionage.news.362.t:0 "Infiltration of [From.GetName] Failed"
+ espionage.news.362.desc:0 "[From.GetAdjective] secret services have intercepted our communications unveiling our plan to infiltrate their country and arrested everyone involved. Unfortunately, they are also aware of the source and identity of the spies involved, thus exposing us to potential diplomatic repercussions with [From.GetName]."
+ espionage.news.362.a:0 "Not good!"
+ 
+ espionage.news.363.t:0 "Infiltration Interrupted! "
+ espionage.news.363.desc:0 "Our Infiltration Team was discovered and arrested while conductiong our Infiltration Mission. This might've happened because our communication channels were compromised. It is best advised that we increase our Spy Efficiency and upgrade our Encryption and Decryption systems."
+ espionage.news.363.a:0 "Not good!"
+ 
+ espionage.news.364.t:0 "Resistance prevailed in [From.From.GetName]"
+ espionage.news.364.desc:0 "Resistance factions funded and supported by a foreign entity in [From.From.GetName] have prevailed and successfully conducted enemy plan in the state, which damaged all of our airbases in the region."
+ espionage.news.364.a:0 "We have to crush the resistance"
+ 
+ espionage.news.365.t:0 "Resistance prevailed in [From.From.GetName]"
+ espionage.news.365.desc:0 "Resistance factions funded and supported by a foreign entity in [From.From.GetName] have prevailed and successfully conducted enemy plan in the state, which damaged all of our radars in the region."
+ espionage.news.365.a:0 "We have to crush the resistance"
+ 
+ espionage.news.366.t:0 "Political Discontent at Home"
+ espionage.news.366.desc:0 "A foreign entity is currently sowing political discontent in our country. They are funding and supporting opposition elements in our political system and blackmailing members of our ruling party into retirement. Our officials have held a press conference promising firm against against any party that may be behind these hostile actions."
+ espionage.news.366.a:0 "We need to find out"
+ 
+ 
+display_country_name:0 "[GetCountryName]"
+GER_Target_name:0 "[GER_Target.GetName]"
+ENG_Target_name:0 "[ENG_Target.GetName]"
+FRA_Target_name:0 "[FRA_Target.GetName]"
+TUR_Target_name:0 "[TUR_Target.GetName]"
+USA_Target_name:0 "[USA_Target.GetName]"
+JAP_Target_name:0 "[JAP_Target.GetName]"
+ITA_Target_name:0 "[ITA_Target.GetName]"
+SOV_Target_name:0 "[SOV_Target.GetName]"
+Target1_name:0 "[target1.GetName]"
+Target2_name:0 "[target2.GetName]"
+Target3_name:0 "[target3.GetName]"
+Target4_name:0 "[target4.GetName]"
+Target5_name:0 "[target5.GetName]"
+Target6_name:0 "[target6.GetName]"
+Target7_name:0 "[target7.GetName]"
+Target8_name:0 "[target8.GetName]"
+Target9_name:0 "[target9.GetName]"
+Target10_name:0 "[target10.GetName]"
+Training_Efficiency:0 "+[?training_efficiency]%§! Spy Efficiency"
+Training_Efficiency_green:0 "§G+[?training_efficiency]%§! Spy Efficiency"
+War_Propaganda_Weekly:0 "+[?war_propaganda_weekly]%§! War Propaganda Weekly"
+War_Propaganda_Weekly_green:0 "§G+[?war_propaganda_weekly]%§! War Propaganda Weekly "
+Spy_Research_Aid:0 "+[?spy_research_bonus]%§! Research Bonus"
+Spy_Research_Aid_green:0 "§G+[?spy_research_bonus]%§! Research Bonus"
+Suppress_Resistance:0 "-[?suppress_resistance_effect]%§! Resistance Effects"
+Suppress_Resistance_green:0 "§G-[?suppress_resistance_effect]%§! Resistance Effects"
+Freiwillige:0 "+[?Freiwillige_effect]%§! extra non-core manpower"
+Freiwillige_green:0 "§G+[?Freiwillige_effect]%§! extra non-core manpower"
+Encryption_selected:0 "§G+10%§! Encryption"
+Decryption_Selected:0 "§G+10%§! Decryption"
+
+
+

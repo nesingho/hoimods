@@ -1,0 +1,717 @@
+guiTypes = {
+
+
+
+	containerWindowType = {
+		name = "btrgmprs_window_main"
+		position = { x=1770 y=0 }
+		size = { width=75 height=85 }
+		moveable = yes
+		clipping = no
+
+		background = {
+			quadTextureSprite ="GFX_tiled_window"
+		}
+
+		buttonType = {
+			name = "btrgmprs_window_main_open"
+			position = { x = 10 y = 10 }
+			size = { width=75 height=70 }
+			quadTextureSprite ="GFX_topbar_trade_button"
+			shortcut = "shift+r"
+
+
+
+
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+
+		}
+		buttonType = {
+			name = "btrgmprs_window_trade_open"
+			position = { x = 10 y = 40 }
+			size = { width=75 height=70 }
+			quadTextureSprite ="GFX_ledger_button"
+			shortcut = "shift+t"
+
+
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+
+		}
+
+
+
+
+	} 
+
+	containerWindowType = {
+		name = "btrgmprs_window"
+		position = { x=1535 y=0 }
+		size = { width=240 height=350 }
+		moveable = yes
+		clipping = no
+
+		background = {
+			name = "btrgmprs_Backgroundx"
+			quadTextureSprite ="GFX_tiled_window"
+		}
+
+
+		instantTextBoxType = {
+			name ="btrgmprs_stockpile_header_stockpile"
+			position = { x= 15 y = 20 }
+			font = "hoi_18mbs"
+			text = "Lager (max [?btrgmprs_stockpile_limit])"
+			pdx_tooltip = "btrgmprs_stockpile_limit_tooltip"
+
+
+
+		}
+
+		instantTextBoxType = {
+			name ="btrgmprs_stockpile_header_change"
+			position = { x= 170 y = 20 }
+			font = "hoi_18mbs"
+			text = "Ändern"
+			maxWidth = 80
+		}
+
+
+
+		buttonType ={
+			name ="btrgmprs_stockpile_oil"
+			spriteType = "GFX_resources_strip"
+			position = { x=20 y=40 }
+			frame  = 1
+		}
+		
+		instantTextBoxType = {
+			name ="btrgmprs_stockpile_oil_text"
+			position = { x= 50 y = 45 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_oil]"
+			format = center
+			maxWidth = 80
+		}
+		instantTextBoxType = {
+			name ="btrgmprs_stockpile_oil_text_change"
+			position = { x= 145 y = 45 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_oil_change]"
+			format = center
+			maxWidth = 80
+		}
+
+
+
+
+
+		buttonType ={
+			name ="btrgmprs_stockpile_rubber"
+			spriteType = "GFX_resources_strip"
+			frame  = 3
+			position = { x=20 y=80 }
+		}
+		
+		instantTextBoxType = {
+			name ="btrgmprs_stockpile_rubber_text"
+			position = { x= 50 y = 85 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_rubber]"
+			format = center
+			maxWidth = 80
+		}
+
+		instantTextBoxType = {
+			name ="btrgmprs_stockpile_rubber_text_change"
+			position = { x= 145 y = 85 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_rubber_change]"
+			format = center
+			maxWidth = 80
+		}
+
+
+
+
+
+
+		buttonType ={
+			name = "btrgmprs_stockpile_aluminum"
+			spriteType = "GFX_resources_strip"
+			frame = 2
+			position = { x=20 y=120 }
+		}
+		
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_aluminum_text"
+			position = { x= 50 y = 125 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_aluminum]"
+			format = center
+			maxWidth = 80
+		}
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_aluminum_text_change"
+			position = { x= 145 y = 125 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_aluminum_change]"
+			format = center
+			maxWidth = 80
+		}
+
+
+
+
+
+		buttonType ={
+			name = "btrgmprs_stockpile_steel"
+			spriteType = "GFX_resources_strip"
+			frame = 5
+			position = { x=20 y=160 }
+		}
+		
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_steel_text"
+			position = { x= 50 y = 165 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_steel]"
+			format = center
+			maxWidth = 80
+			maxHeight = 24
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_steel_text_change"
+			position = { x= 145 y = 165 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_steel_change]"
+			format = center
+			maxWidth = 80
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+
+
+
+
+
+		buttonType ={
+			name = "btrgmprs_stockpile_tungsten"
+			spriteType = "GFX_resources_strip"
+			frame=4
+			position = { x=20 y=200 }
+		}
+		
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_tungsten_text"
+			position = { x= 50 y = 205 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_tungsten]"
+			format = center
+			maxWidth = 80
+		}
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_tungsten_text_change"
+			position = { x= 145 y = 205 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_tungsten_change]"
+			format = center
+			maxWidth = 80
+		}
+
+
+
+
+
+		buttonType ={
+			name = "btrgmprs_stockpile_chromium"
+			spriteType = "GFX_resources_strip"
+			frame=6
+			position = { x=20 y=240 }
+		}
+		
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_chromium_text"
+			position = { x= 50 y = 245 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_chromium]"
+			format = center
+			maxWidth = 80
+		}
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_chromium_text_change"
+			position = { x= 145 y = 245 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_chromium_change]"
+			format = center
+			maxWidth = 80
+		}
+
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_money"
+			position = { x= 25 y = 280 }
+			font = "hoi_18mbs"
+			text = "$"
+			maxWidth = 100
+		}
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_money_text"
+			position = { x= 50 y = 280 }
+			font = "hoi_18mbs"
+			text = "[?stockpile_money]"
+			format = center
+			maxWidth = 80
+		}
+
+		instantTextBoxType = {
+			name = "btrgmprs_stockpile_money_income_text"
+			position = { x= 145 y = 280 }
+			font = "hoi_18mbs"
+			text = "[?btrgmprs_money_income]"
+			format = center
+			maxWidth = 80
+			pdx_tooltip = "btrgmprs_money_income_tooltip"
+
+		}
+
+		buttonType = {
+			name = "btrgmprs_stockpile_trade_open"
+			position = { x = 15 y = 310 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "Handeln"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+			shortcut = "shift+t" 
+
+		}
+
+		buttonType = {
+			name = "btrgmprs_close_main"
+			position = { x = 150 y = 310 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "Schließen"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+
+		}
+
+
+	}
+
+
+	containerWindowType = {
+		name = "btrgmprs_trade_container"
+		size = { width = 550 height = 510}
+		position = { x=1015 y=0 }
+		moveable = yes
+		
+		background = {
+			name = "btrgmprs_Background"	
+			quadTextureSprite ="GFX_world_tension_bg"
+		}
+
+		buttonType = {
+			name = "btrgmprs_close_trade"
+			position = { x = 230 y = 480 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "Schließen"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+
+		}
+
+       instantTextBoxType = {
+           name ="btrgmprs_trade_header"
+           position = { x= 140 y = 30 }
+           font = "hoi_24header"
+           text = "Weltmarkt"
+           format = center
+           maxWidth = 250
+           maxHeight = 24
+           fixedsize = yes
+       }
+
+       instantTextBoxType = {
+           name ="btrgmprs_trade_header2df"
+           position = { x= 150 y = 130 }
+           font = "hoi_18b"
+           text = "Im Weltmarkt verfügbare Ressourcen"
+           maxWidth = 550
+           fixedsize = yes
+       }
+       instantTextBoxType = {
+           name ="btrgmprs_trade_header2"
+           position = { x= 15 y = 140 }
+           font = "hoi_18b"
+           text = "_______________________________________________________________________"
+           maxWidth = 550
+           fixedsize = yes
+       }
+
+       instantTextBoxType = {
+           name ="btrgmprs_trade_header2dfsd"
+           position = { x= 220 y = 205 }
+           font = "hoi_18b"
+           text = "Derzeitige Preise"
+           maxWidth = 550
+           fixedsize = yes
+       }
+       instantTextBoxType = {
+           name ="btrgmprs_trade_header2dfgdfg"
+           position = { x= 15 y = 210 }
+           font = "hoi_18b"
+           text = "_______________________________________________________________________"
+           maxWidth = 550
+           fixedsize = yes
+       }
+
+		buttonType = {
+			name = "btrgmprs_oil_icon"
+			position = { x=50 y=90 }
+			spriteType = "GFX_resources_strip"
+			frame = 1
+		}
+       instantTextBoxType = {
+           name ="btrgmprs_oil_stock_box"
+           position = { x= 20 y = 170 }
+           font = "hoi_18b"
+           text = "[?global.oil_stock]"
+           maxWidth = 70
+           format = center
+       }
+
+
+		buttonType = {
+			name = "btrgmprs_buy_stock_oil"
+			position = { x = 30 y = 270 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "K 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+
+		}
+
+		buttonType = {
+			name = "btrgmprs_sell_stock_oil"
+			position = { x = 30 y = 320 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "V 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+
+
+       instantTextBoxType = {
+           name ="btrgmprs_config_cost_oil"
+           position = { x= 20 y = 240 }
+           font = "hoi_18b"
+           text = "[?global.btrgmprs_cost_oil]"
+           maxWidth = 70
+           format = center
+       }
+
+
+		buttonType = {
+			name = "btrgmprs_rubber_icon"
+			position = { x=120 y=90 }
+			spriteType = "GFX_resources_strip"
+			frame = 3
+		}
+       instantTextBoxType = {
+           name ="btrgmprs_rubber_stock_box"
+           position = { x= 100 y = 170 }
+           font = "hoi_18b"
+           text = "[?global.rubber_stock]"
+           maxWidth = 70
+           format = center
+       }
+		buttonType = {
+			name = "btrgmprs_buy_stock_rubber"
+			position = { x = 100 y = 270 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "K 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "btrgmprs_sell_stock_rubber"
+			position = { x = 100 y = 320 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "V 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+
+       instantTextBoxType = {
+           name ="btrgmprs_config_cost_rubber"
+           position = { x= 100 y = 240 }
+           font = "hoi_18b"
+           text = "[?global.btrgmprs_cost_rubber]"
+           maxWidth = 70
+           format = center
+       }
+
+
+
+
+
+		buttonType = {
+			name = "btrgmprs_steel_icon"
+			position = { x=190 y=90 }
+			spriteType = "GFX_resources_strip"
+			frame = 5
+		}
+       instantTextBoxType = {
+           name = "btrgmprs_steel_stock_box"
+           position = { x= 170 y = 170 }
+           font = "hoi_18b"
+           text = "[?global.steel_stock]"
+           maxWidth = 70
+           format = center
+       }
+		buttonType = {
+			name = "btrgmprs_buy_stock_steel"
+			position = { x = 170 y = 270 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "K 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "btrgmprs_sell_stock_steel"
+			position = { x = 170 y = 320 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "V 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+
+       instantTextBoxType = {
+           name ="btrgmprs_config_cost_steel"
+           position = { x= 170 y = 240 }
+           font = "hoi_18b"
+           text = "[?global.btrgmprs_cost_steel]"
+           maxWidth = 70
+           format = center
+       }
+
+
+
+
+
+
+		buttonType = {
+			name = "btrgmprs_aluminum_icon"
+			position = { x=260 y=90 }
+			spriteType = "GFX_resources_strip"
+			frame = 2
+		}
+
+       instantTextBoxType = {
+           name ="btrgmprs_aluminum_stock_box"
+           position = { x= 235 y = 170 }
+           font = "hoi_18b"
+           text = "[?global.aluminum_stock]"
+           maxWidth = 70
+           format = center
+       }
+		buttonType = {
+			name = "btrgmprs_buy_stock_aluminum"
+			position = { x = 235 y = 270 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "K 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "btrgmprs_sell_stock_aluminum"
+			position = { x = 235 y = 320 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "V 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+
+       instantTextBoxType = {
+           name ="btrgmprs_config_cost_aluminum"
+           position = { x= 235 y = 240 }
+           font = "hoi_18b"
+           text = "[?global.btrgmprs_cost_aluminum]"
+           maxWidth = 70
+           format = center
+       }
+
+
+
+
+
+		buttonType = {
+			name = "btrgmprs_tungsten_icon"
+			position = { x=340 y=90 }
+			spriteType = "GFX_resources_strip"
+			frame = 4
+		}
+
+       instantTextBoxType = {
+           name ="btrgmprs_tungsten_stock_icon"
+           position = { x= 310 y = 170 }
+           font = "hoi_18b"
+           text = "[?global.tungsten_stock]"
+           maxWidth = 70
+           format = center
+       }
+		buttonType = {
+			name = "btrgmprs_buy_stock_tungsten"
+			position = { x = 310 y = 270 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "K 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "btrgmprs_sell_stock_tungsten"
+			position = { x = 310 y = 320 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "V 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+
+       instantTextBoxType = {
+           name ="btrgmprs_config_cost_tungsten"
+           position = { x= 310 y = 240 }
+           font = "hoi_18b"
+           text = "[?global.btrgmprs_cost_tungsten]"
+           maxWidth = 70
+           format = center
+       }
+
+
+
+
+		buttonType = {
+			name = "btrgmprs_chromium_icon"
+			position = { x=420 y=90 }
+			spriteType = "GFX_resources_strip"
+			frame = 6
+		}
+       instantTextBoxType = {
+           name ="btrgmprs_chromium_stock_icon"
+           position = { x= 400 y = 170 }
+           font = "hoi_18b"
+           text = "[?global.chromium_stock]"
+           maxWidth = 70
+           format = center
+       }
+		buttonType = {
+			name = "btrgmprs_buy_stock_chromium"
+			position = { x = 400 y = 270 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "K 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "btrgmprs_sell_stock_chromium"
+			position = { x = 400 y = 320 }
+			buttonFont = "hoi_16mbs"
+			buttonText = "V 1000"			
+			quadTextureSprite = "GFX_small_button_71x26"
+			clicksound = click_default
+		}
+
+       instantTextBoxType = {
+           name ="btrgmprs_config_cost_chromium"
+           position = { x= 400 y = 240 }
+           font = "hoi_18b"
+           text = "[?global.btrgmprs_cost_chromium]"
+           maxWidth = 70
+           format = center
+       }
+
+
+
+
+       instantTextBoxType = {
+           name ="btrgmprs_trade_header2dfdf"
+           position = { x= 200 y = 360 }
+           font = "hoi_18b"
+           text = "Ressourcen im Lager"
+           maxWidth = 550
+           fixedsize = yes
+       }
+       instantTextBoxType = {
+           name ="btrgmprs_trade_header2dfg"
+           position = { x= 15 y = 365 }
+           font = "hoi_18b"
+           text = "_______________________________________________________________________"
+           maxWidth = 550
+           fixedsize = yes
+       }
+       instantTextBoxType = {
+           name ="btrgmprs_oil_stock_box2"
+           position = { x= 20 y = 390 }
+           font = "hoi_18b"
+           text = "[?stockpile_oil]"
+           maxWidth = 70
+           format = center
+       }
+       instantTextBoxType = {
+           name ="btrgmprs_rubber_stock_box2"
+           position = { x= 95 y = 390 }
+           font = "hoi_18b"
+           text = "[?stockpile_rubber]"
+           maxWidth = 70
+           format = center
+       }
+       instantTextBoxType = {
+           name = "btrgmprs_btrgmprs_steel_stock_box2"
+           position = { x= 165 y = 390 }
+           font = "hoi_18b"
+           text = "[?stockpile_steel]"
+           maxWidth = 70
+           format = center
+       }
+       instantTextBoxType = {
+           name ="btrgmprs_aluminum_stock_box2"
+           position = { x= 235 y = 390 }
+           font = "hoi_18b"
+           text = "[?stockpile_aluminum]"
+           maxWidth = 70
+           format = center
+       }
+       instantTextBoxType = {
+           name ="btrgmprs_tungsten_stock_box2"
+           position = { x= 310 y = 390 }
+           font = "hoi_18b"
+           text = "[?stockpile_tungsten]"
+           maxWidth = 70
+           format = center
+       }
+       instantTextBoxType = {
+           name ="btrgmprs_chromium_stock_box2"
+           position = { x= 395 y = 390 }
+           font = "hoi_18b"
+           text = "[?stockpile_chromium]"
+           maxWidth = 70
+           format = center
+       }
+
+
+
+
+
+
+	}
+
+
+
+
+
+	
+
+
+}

@@ -1,0 +1,992 @@
+on_actions = {
+
+    on_capitulation = {
+        effect = {
+
+            add_to_variable = { FROM.stockpile_oil = ROOT.stockpile_oil }
+            set_variable  = { ROOT.stockpile_oil = 0 }
+
+            add_to_variable = { FROM.stockpile_rubber = ROOT.stockpile_rubber }
+            set_variable  = { ROOT.stockpile_rubber = 0 }
+
+            add_to_variable = { FROM.stockpile_aluminum = ROOT.stockpile_aluminum }
+            set_variable  = { ROOT.stockpile_aluminum = 0 }
+
+            add_to_variable = { FROM.stockpile_tungsten = ROOT.stockpile_tungsten }
+            set_variable  = { ROOT.stockpile_tungsten = 0 }
+
+            add_to_variable = { FROM.stockpile_steel = ROOT.stockpile_steel }
+            set_variable  = { ROOT.stockpile_steel = 0 }
+
+            add_to_variable = { FROM.stockpile_chromium = ROOT.stockpile_chromium }
+            set_variable  = { ROOT.stockpile_chromium = 0 }
+
+        }
+    }
+
+    on_state_control_changed = {
+        effect = {
+
+            set_temp_variable = { t_seize = 100 }
+            divide_temp_variable = { t_seize = FROM.num_controlled_states }
+            add_to_temp_variable = { t_seize = 5 }
+            divide_temp_variable = { t_seize = 100 }
+
+            if = {
+                limit = {
+                    FROM.FROM = {is_owned_by = ROOT}
+                }
+                set_temp_variable = {t_seize=0}
+            }
+
+
+            set_temp_variable = { t_seize_oil = FROM.stockpile_oil }
+            multiply_temp_variable = { t_seize_oil = t_seize }
+
+            add_to_variable = { ROOT.stockpile_oil = t_seize_oil }
+            subtract_from_variable  = { FROM.stockpile_oil = t_seize_oil }
+            round_variable = ROOT.stockpile_oil
+            round_variable = FROM.stockpile_oil
+
+
+
+
+            set_temp_variable = { t_seize_rubber = FROM.stockpile_rubber }
+            multiply_temp_variable = { t_seize_rubber = t_seize }
+
+            add_to_variable = { ROOT.stockpile_rubber = t_seize_rubber }
+            subtract_from_variable  = { FROM.stockpile_rubber = t_seize_rubber }
+            round_variable = ROOT.stockpile_rubber
+            round_variable = FROM.stockpile_rubber
+
+
+
+
+            set_temp_variable = { t_seize_steel = FROM.stockpile_steel }
+            multiply_temp_variable = { t_seize_steel = t_seize }
+
+            add_to_variable = { ROOT.stockpile_steel = t_seize_steel }
+            subtract_from_variable  = { FROM.stockpile_steel = t_seize_steel }
+            round_variable = ROOT.stockpile_steel
+            round_variable = FROM.stockpile_steel
+
+
+
+
+            set_temp_variable = { t_seize_aluminum = FROM.stockpile_aluminum }
+            multiply_temp_variable = { t_seize_aluminum = t_seize }
+
+            add_to_variable = { ROOT.stockpile_aluminum = t_seize_aluminum }
+            subtract_from_variable  = { FROM.stockpile_aluminum = t_seize_aluminum }
+            round_variable = ROOT.stockpile_aluminum
+            round_variable = FROM.stockpile_aluminum
+
+
+
+
+            set_temp_variable = { t_seize_tungsten = FROM.stockpile_tungsten }
+            multiply_temp_variable = { t_seize_tungsten = t_seize }
+
+            add_to_variable = { ROOT.stockpile_tungsten = t_seize_tungsten }
+            subtract_from_variable  = { FROM.stockpile_tungsten = t_seize_tungsten }
+            round_variable = ROOT.stockpile_tungsten
+            round_variable = FROM.stockpile_tungsten
+
+
+
+
+            set_temp_variable = { t_seize_chromium = FROM.stockpile_chromium }
+            multiply_temp_variable = { t_seize_chromium = t_seize }
+
+            add_to_variable = { ROOT.stockpile_chromium = t_seize_chromium }
+            subtract_from_variable  = { FROM.stockpile_chromium = t_seize_chromium }
+            round_variable = ROOT.stockpile_chromium
+            round_variable = FROM.stockpile_chromium
+
+        }
+    }
+
+    on_daily = {
+		effect = {
+
+            if = {
+                limit={
+                        is_ai = no
+                }
+
+                if = {
+                    limit={
+                        AND = { 
+                            check_variable = { global.btrgmprs_cost_steel < 1 }}
+                            is_ai = no
+                        }
+                        set_variable = {global.btrgmprs_cost_oil=30}
+                        set_variable = {global.btrgmprs_cost_rubber=50}
+                        set_variable = {global.btrgmprs_cost_steel=5}
+                        set_variable = {global.btrgmprs_cost_aluminum=20}
+                        set_variable = {global.btrgmprs_cost_tungsten=30}
+                        set_variable = {global.btrgmprs_cost_chromium=35}
+                }
+
+                if = {
+                    limit={
+                        AND = { 
+                            check_variable = { global.oil_stock > 1000000 }}
+                            is_ai = no
+                        }
+                        set_variable = {global.oil_stock=1000000}
+                }
+
+                if = {
+                    limit={
+                        AND = { 
+                            check_variable = { global.rubber_stock > 1000000 }}
+                            is_ai = no
+                        }
+                        set_variable = {global.rubber_stock=1000000}
+                }
+
+                if = {
+                    limit={
+                        AND = { 
+                            check_variable = { global.aluminum_stock > 1000000 }}
+                            is_ai = no
+                        }
+                        set_variable = {global.aluminum_stock=1000000}
+                }
+
+                if = {
+                    limit={
+                        AND = { 
+                            check_variable = { global.tungsten_stock > 1000000 }}
+                            is_ai = no
+                        }
+                        set_variable = {global.tungsten_stock=1000000}
+                }
+
+                if = {
+                    limit={
+                        AND = { 
+                            check_variable = { global.chromium_stock > 1000000 }}
+                            is_ai = no
+                        }
+                        set_variable = {global.chromium_stock=1000000}
+                }
+
+            }
+
+
+        	ROOT = {
+
+                set_variable = { btrgmprs_stockpile_limit = 0 }  
+                add_to_variable = { btrgmprs_stockpile_limit = num_of_factories }
+                multiply_variable = {btrgmprs_stockpile_limit=500}
+                add_to_variable = { btrgmprs_stockpile_limit = 20000 }
+                if = {
+                    limit={check_variable = { btrgmprs_stockpile_limit > 100000 }}
+                    set_temp_variable = { btrgmprs_stockpile_limit = 100000  }
+                }
+
+
+
+
+
+                set_variable = { btrgmprs_money_income = num_of_civilian_factories }  
+                multiply_variable = { btrgmprs_money_income = 5 }  
+                multiply_variable = { btrgmprs_money_income = stability }  
+                round_variable =  btrgmprs_money_income  
+
+                add_to_variable = { stockpile_money = btrgmprs_money_income }
+
+                
+
+
+                ############## oil
+                set_temp_variable = { tmp_stockpile_oil = stockpile_oil  }
+                set_temp_variable = { tmp_production_oil = resource@oil  }
+                subtract_from_temp_variable = { tmp_production_oil = stockpile_oil_used }
+
+                if = {
+                    limit={check_variable = { stockpile_oil < 0 }}
+                    set_temp_variable = { stockpile_oil = 0  }
+                }
+                set_variable = {stockpile_oil_change=0}
+                if = {
+
+                    limit={check_variable = { tmp_production_oil < 0 }}
+
+                    set_variable = { stockpile_oil_need = tmp_production_oil  }
+                    multiply_variable = {stockpile_oil_need = -1}
+
+                    set_variable = { stockpile_oil_used = stockpile_oil_need}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_oil < stockpile_oil_need }
+                        }
+                        set_variable = {stockpile_oil_used=stockpile_oil}
+                    }
+
+                    add_offsite_building = { type = btrgmpstockpile_oil level = -999 }
+                    add_offsite_building = { type = btrgmpstockpile_oil level = stockpile_oil_used }
+                    subtract_from_variable = { stockpile_oil = stockpile_oil_used }
+
+                    set_variable = {stockpile_oil_change=stockpile_oil_used}
+                    multiply_variable = {stockpile_oil_change = -1}
+
+
+                }
+                if = {
+
+                    limit={check_variable = { tmp_production_oil > 0 }}
+
+                    set_temp_variable = { tmp_production_oil = resource@oil  }
+                    subtract_from_temp_variable = { tmp_production_oil = stockpile_oil_used }
+
+                    set_variable = { stockpile_oil_need = 0  }
+                    set_variable = { stockpile_oil_used = 0  }
+
+
+                    add_offsite_building = { type = btrgmpstockpile_oil level = -999 }
+                    add_to_variable = { stockpile_oil = tmp_production_oil }
+
+                    set_variable = {stockpile_oil_change=tmp_production_oil}
+                }
+                
+                ######################## rubber
+
+                set_temp_variable = { tmp_stockpile_rubber = stockpile_rubber  }
+                set_temp_variable = { tmp_production_rubber = resource@rubber  }
+                subtract_from_temp_variable = { tmp_production_rubber = stockpile_rubber_used }
+
+                if = {
+                    limit={check_variable = { stockpile_rubber < 0 }}
+                    set_temp_variable = { stockpile_rubber = 0  }
+                }
+                set_variable = {stockpile_rubber_change=0}
+                if = {
+
+                    limit={check_variable = { tmp_production_rubber < 0 }}
+
+                    set_variable = { stockpile_rubber_need = tmp_production_rubber  }
+                    multiply_variable = {stockpile_rubber_need = -1}
+
+                    set_variable = { stockpile_rubber_used = stockpile_rubber_need}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_rubber < stockpile_rubber_need }
+                        }
+                        set_variable = {stockpile_rubber_used=stockpile_rubber}
+                    }
+
+                    add_offsite_building = { type = btrgmpstockpile_rubber level = -999 }
+                    add_offsite_building = { type = btrgmpstockpile_rubber level = stockpile_rubber_used }
+                    subtract_from_variable = { stockpile_rubber = stockpile_rubber_used }
+
+                    set_variable = {stockpile_rubber_change=stockpile_rubber_used}
+                    multiply_variable = {stockpile_rubber_change = -1}
+
+
+                }
+                if = {
+
+                    limit={check_variable = { tmp_production_rubber > 0 }}
+
+                    set_temp_variable = { tmp_production_rubber = resource@rubber  }
+                    subtract_from_temp_variable = { tmp_production_rubber = stockpile_rubber_used }
+
+                    set_variable = { stockpile_rubber_need = 0  }
+                    set_variable = { stockpile_rubber_used = 0  }
+
+
+                    add_offsite_building = { type = btrgmpstockpile_rubber level = -999 }
+                    add_to_variable = { stockpile_rubber = tmp_production_rubber }
+
+                    set_variable = {stockpile_rubber_change=tmp_production_rubber}
+                }
+
+                ######################## steel
+
+                set_temp_variable = { tmp_stockpile_steel = stockpile_steel  }
+                set_temp_variable = { tmp_production_steel = resource@steel  }
+                subtract_from_temp_variable = { tmp_production_steel = stockpile_steel_used }
+
+                if = {
+                    limit={check_variable = { stockpile_steel < 0 }}
+                    set_temp_variable = { stockpile_steel = 0  }
+                }
+                set_variable = {stockpile_steel_change=0}
+                if = {
+
+                    limit={check_variable = { tmp_production_steel < 0 }}
+
+                    set_variable = { stockpile_steel_need = tmp_production_steel  }
+                    multiply_variable = {stockpile_steel_need = -1}
+
+                    set_variable = { stockpile_steel_used = stockpile_steel_need}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_steel < stockpile_steel_need }
+                        }
+                        set_variable = {stockpile_steel_used=stockpile_steel}
+                    }
+
+                    add_offsite_building = { type = btrgmpstockpile_steel level = -999 }
+                    add_offsite_building = { type = btrgmpstockpile_steel level = stockpile_steel_used }
+                    subtract_from_variable = { stockpile_steel = stockpile_steel_used }
+
+                    set_variable = {stockpile_steel_change=stockpile_steel_used}
+                    multiply_variable = {stockpile_steel_change = -1}
+
+
+                }
+                if = {
+
+                    limit={check_variable = { tmp_production_steel > 0 }}
+
+                    set_temp_variable = { tmp_production_steel = resource@steel  }
+                    subtract_from_temp_variable = { tmp_production_steel = stockpile_steel_used }
+
+                    set_variable = { stockpile_steel_need = 0  }
+                    set_variable = { stockpile_steel_used = 0  }
+
+
+                    add_offsite_building = { type = btrgmpstockpile_steel level = -999 }
+                    add_to_variable = { stockpile_steel = tmp_production_steel }
+
+                    set_variable = {stockpile_steel_change=tmp_production_steel}
+                }
+
+
+
+
+
+                ######################## chromium
+
+                set_temp_variable = { tmp_stockpile_chromium = stockpile_chromium  }
+                set_temp_variable = { tmp_production_chromium = resource@chromium  }
+                subtract_from_temp_variable = { tmp_production_chromium = stockpile_chromium_used }
+
+                if = {
+                    limit={check_variable = { stockpile_chromium < 0 }}
+                    set_temp_variable = { stockpile_chromium = 0  }
+                }
+                set_variable = {stockpile_chromium_change=0}
+                if = {
+
+                    limit={check_variable = { tmp_production_chromium < 0 }}
+
+                    set_variable = { stockpile_chromium_need = tmp_production_chromium  }
+                    multiply_variable = {stockpile_chromium_need = -1}
+
+                    set_variable = { stockpile_chromium_used = stockpile_chromium_need}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_chromium < stockpile_chromium_need }
+                        }
+                        set_variable = {stockpile_chromium_used=stockpile_chromium}
+                    }
+
+                    add_offsite_building = { type = btrgmpstockpile_chromium level = -999 }
+                    add_offsite_building = { type = btrgmpstockpile_chromium level = stockpile_chromium_used }
+                    subtract_from_variable = { stockpile_chromium = stockpile_chromium_used }
+
+                    set_variable = {stockpile_chromium_change=stockpile_chromium_used}
+                    multiply_variable = {stockpile_chromium_change = -1}
+
+
+                }
+                if = {
+
+                    limit={check_variable = { tmp_production_chromium > 0 }}
+
+                    set_temp_variable = { tmp_production_chromium = resource@chromium  }
+                    subtract_from_temp_variable = { tmp_production_chromium = stockpile_chromium_used }
+
+                    set_variable = { stockpile_chromium_need = 0  }
+                    set_variable = { stockpile_chromium_used = 0  }
+
+
+                    add_offsite_building = { type = btrgmpstockpile_chromium level = -999 }
+                    add_to_variable = { stockpile_chromium = tmp_production_chromium }
+
+                    set_variable = {stockpile_chromium_change=tmp_production_chromium}
+                }
+
+                ######################## aluminum
+
+                set_temp_variable = { tmp_stockpile_aluminum = stockpile_aluminum  }
+                set_temp_variable = { tmp_production_aluminum = resource@aluminium  }
+                subtract_from_temp_variable = { tmp_production_aluminum = stockpile_aluminum_used }
+
+                if = {
+                    limit={check_variable = { stockpile_aluminum < 0 }}
+                    set_temp_variable = { stockpile_aluminum = 0  }
+                }
+                set_variable = {stockpile_aluminum_change=0}
+                if = {
+
+                    limit={check_variable = { tmp_production_aluminum < 0 }}
+
+                    set_variable = { stockpile_aluminum_need = tmp_production_aluminum  }
+                    multiply_variable = {stockpile_aluminum_need = -1}
+
+                    set_variable = { stockpile_aluminum_used = stockpile_aluminum_need}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_aluminum < stockpile_aluminum_need }
+                        }
+                        set_variable = {stockpile_aluminum_used=stockpile_aluminum}
+                    }
+
+                    add_offsite_building = { type = btrgmpstockpile_aluminum level = -999 }
+                    add_offsite_building = { type = btrgmpstockpile_aluminum level = stockpile_aluminum_used }
+                    subtract_from_variable = { stockpile_aluminum = stockpile_aluminum_used }
+
+                    set_variable = {stockpile_aluminum_change=stockpile_aluminum_used}
+                    multiply_variable = {stockpile_aluminum_change = -1}
+
+
+                }
+                if = {
+
+                    limit={check_variable = { tmp_production_aluminum > 0 }}
+
+
+                    set_temp_variable = { tmp_production_aluminum = resource@aluminium  }
+                    subtract_from_temp_variable = { tmp_production_aluminum = stockpile_aluminum_used }
+
+                    set_variable = { stockpile_aluminum_need = 0  }
+                    set_variable = { stockpile_aluminum_used = 0  }
+
+
+                    add_offsite_building = { type = btrgmpstockpile_aluminum level = -999 }
+                    add_to_variable = { stockpile_aluminum = tmp_production_aluminum }
+
+
+                    set_variable = {stockpile_aluminum_change=tmp_production_aluminum}
+                }
+
+                ######################## tungsten
+
+                set_temp_variable = { tmp_stockpile_tungsten = stockpile_tungsten  }
+                set_temp_variable = { tmp_production_tungsten = resource@tungsten  }
+                subtract_from_temp_variable = { tmp_production_tungsten = stockpile_tungsten_used }
+
+                if = {
+                    limit={check_variable = { stockpile_tungsten < 0 }}
+                    set_temp_variable = { stockpile_tungsten = 0  }
+                }
+                set_variable = {stockpile_tungsten_change=0}
+                if = {
+
+                    limit={check_variable = { tmp_production_tungsten < 0 }}
+
+                    set_variable = { stockpile_tungsten_need = tmp_production_tungsten  }
+                    multiply_variable = {stockpile_tungsten_need = -1}
+
+                    set_variable = { stockpile_tungsten_used = stockpile_tungsten_need}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_tungsten < stockpile_tungsten_need }
+                        }
+                        set_variable = {stockpile_tungsten_used=stockpile_tungsten}
+                    }
+
+                    add_offsite_building = { type = btrgmpstockpile_tungsten level = -999 }
+                    add_offsite_building = { type = btrgmpstockpile_tungsten level = stockpile_tungsten_used }
+                    subtract_from_variable = { stockpile_tungsten = stockpile_tungsten_used }
+
+                    set_variable = {stockpile_tungsten_change=stockpile_tungsten_used}
+                    multiply_variable = {stockpile_tungsten_change = -1}
+
+
+                }
+                if = {
+
+                    limit={check_variable = { tmp_production_tungsten > 0 }}
+
+                    set_temp_variable = { tmp_production_tungsten = resource@tungsten  }
+                    subtract_from_temp_variable = { tmp_production_tungsten = stockpile_tungsten_used }
+
+                    set_variable = { stockpile_tungsten_need = 0  }
+                    set_variable = { stockpile_tungsten_used = 0  }
+
+
+                    add_offsite_building = { type = btrgmpstockpile_tungsten level = -999 }
+                    add_to_variable = { stockpile_tungsten = tmp_production_tungsten }
+
+                    set_variable = {stockpile_tungsten_change=tmp_production_tungsten}
+                }
+
+                if = {
+                    limit={check_variable = { btrgmprs_stockpile_limit < stockpile_oil }}
+                    set_variable = {stockpile_oil=btrgmprs_stockpile_limit}
+                }
+                if = {
+                    limit={check_variable = { btrgmprs_stockpile_limit < stockpile_rubber }}
+                    set_variable = {stockpile_rubber=btrgmprs_stockpile_limit}
+                }
+                if = {
+                    limit={check_variable = { btrgmprs_stockpile_limit < stockpile_steel }}
+                    set_variable = {stockpile_steel=btrgmprs_stockpile_limit}
+                }
+                if = {
+                    limit={check_variable = { btrgmprs_stockpile_limit < stockpile_tungsten }}
+                    set_variable = {stockpile_tungsten=btrgmprs_stockpile_limit}
+                }
+                if = {
+                    limit={check_variable = { btrgmprs_stockpile_limit < stockpile_chromium }}
+                    set_variable = {stockpile_chromium=btrgmprs_stockpile_limit}
+                }
+                if = {
+                    limit={check_variable = { btrgmprs_stockpile_limit < stockpile_aluminum }}
+                    set_variable = {stockpile_aluminum=btrgmprs_stockpile_limit}
+                }
+                if = {
+                    limit={check_variable = { 1000000 < stockpile_money }}
+                    set_variable = {stockpile_money=1000000}
+                }
+
+                add_to_variable = {btrgmprs_market_day=1}
+
+                ############### oil buy
+                if = {
+                    limit = {
+                        AND = {
+                            check_variable = { btrgmprs_market_day > 3 }
+                            is_ai = yes
+                        }    
+                    }
+                    
+
+                    set_temp_variable = {stockpile_goal_oil=resource_consumed@oil}
+                    multiply_temp_variable = {stockpile_goal_oil=30}
+                    add_to_temp_variable = {stockpile_goal_oil=3000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_oil>stockpile_oil } 
+                        }
+
+                        set_temp_variable = {money_need=0}
+                        add_to_temp_variable = {money_need = 1000}
+                        multiply_temp_variable = {money_need = global.btrgmprs_cost_oil}
+                        subtract_from_temp_variable = { money_need = 1}
+
+
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { global.oil_stock > 999 }
+                                    check_variable = { money_need < stockpile_money }
+                                }
+                            }
+                            subtract_from_variable = { global.oil_stock = 1000}
+                            add_to_variable = { stockpile_oil = 1000}
+                            subtract_from_variable = { stockpile_money = money_need}
+                            subtract_from_variable = { stockpile_money = 1}
+                        }
+                    }
+
+                    add_to_temp_variable = {stockpile_goal_oil=1000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_oil<stockpile_oil } 
+                        }
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { stockpile_oil > 999 }
+                                }
+                            }
+                            subtract_from_variable = { stockpile_oil = 1000}
+                            add_to_variable = { global.oil_stock = 1000}
+
+                            set_temp_variable = { money_plus = 1000 }
+                            multiply_temp_variable = {money_plus = global.btrgmprs_cost_oil}
+
+
+                            add_to_variable = { stockpile_money = money_plus}
+
+
+
+                        }
+                    }
+
+                }
+
+                ############### rubber buy
+                if = {
+                    limit = {
+                        AND = {
+                            check_variable = { btrgmprs_market_day > 3 }
+                            is_ai = yes
+                        }    
+                    }
+                    
+
+                    set_temp_variable = {stockpile_goal_rubber=resource_consumed@rubber}
+                    multiply_temp_variable = {stockpile_goal_rubber=30}
+                    add_to_temp_variable = {stockpile_goal_rubber=3000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_rubber>stockpile_rubber } 
+                        }
+
+                        set_temp_variable = {money_need=0}
+                        add_to_temp_variable = {money_need = 1000}
+                        multiply_temp_variable = {money_need = global.btrgmprs_cost_rubber}
+                        subtract_from_temp_variable = { money_need = 1}
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { global.rubber_stock > 999 }
+                                    check_variable = { money_need < stockpile_money }
+                                }
+                            }
+                            subtract_from_variable = { global.rubber_stock = 1000}
+                            add_to_variable = { stockpile_rubber = 1000}
+                            subtract_from_variable = { stockpile_money = money_need}
+                            subtract_from_variable = { stockpile_money = 1}
+                        }
+                    }
+
+                    add_to_temp_variable = {stockpile_goal_rubber=1000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_rubber<stockpile_rubber } 
+                        }
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { stockpile_rubber > 999 }
+                                }
+                            }
+                            subtract_from_variable = { stockpile_rubber = 1000}
+                            add_to_variable = { global.rubber_stock = 1000}
+
+                            set_temp_variable = { money_plus = 1000 }
+                            multiply_temp_variable = {money_plus = global.btrgmprs_cost_rubber}
+
+
+                            add_to_variable = { stockpile_money = money_plus}
+
+
+
+                        }
+                    }
+
+                }
+
+
+                ############### steel buy
+                if = {
+                    limit = {
+                        AND = {
+                            check_variable = { btrgmprs_market_day > 3 }
+                            is_ai = yes
+                        }    
+                    }
+                    
+
+                    set_temp_variable = {stockpile_goal_steel=resource_consumed@steel}
+                    multiply_temp_variable = {stockpile_goal_steel=30}
+                    add_to_temp_variable = {stockpile_goal_steel=5000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_steel>stockpile_steel } 
+                        }
+
+                        set_temp_variable = {money_need=0}
+                        add_to_temp_variable = {money_need = 1000}
+                        multiply_temp_variable = {money_need = global.btrgmprs_cost_steel}
+                        subtract_from_temp_variable = { money_need = 1}
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { global.steel_stock > 999 }
+                                    check_variable = { money_need < stockpile_money }
+                                }
+                            }
+                            subtract_from_variable = { global.steel_stock = 1000}
+                            add_to_variable = { stockpile_steel = 1000}
+                            subtract_from_variable = { stockpile_money = money_need}
+                            subtract_from_variable = { stockpile_money = 1}
+                        }
+                    }
+
+
+                    add_to_temp_variable = {stockpile_goal_steel=1000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_steel<stockpile_steel } 
+                        }
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { stockpile_steel > 999 }
+                                }
+                            }
+                            subtract_from_variable = { stockpile_steel = 1000}
+                            add_to_variable = { global.steel_stock = 1000}
+
+                            set_temp_variable = { money_plus = 1000 }
+                            multiply_temp_variable = {money_plus = global.btrgmprs_cost_steel}
+
+
+                            add_to_variable = { stockpile_money = money_plus}
+
+
+
+                        }
+                    }
+
+                }
+
+
+                ############### aluminum buy
+                if = {
+                    limit = {
+                        AND = {
+                            check_variable = { btrgmprs_market_day > 3 }
+                            is_ai = yes
+                        }    
+                    }
+                    
+
+                    set_temp_variable = {stockpile_goal_aluminum=resource_consumed@aluminum}
+                    multiply_temp_variable = {stockpile_goal_aluminum=30}
+                    add_to_temp_variable = {stockpile_goal_aluminum=3000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_aluminum>stockpile_aluminum } 
+                        }
+
+                        set_temp_variable = {money_need=0}
+                        add_to_temp_variable = {money_need = 1000}
+                        multiply_temp_variable = {money_need = global.btrgmprs_cost_aluminum}
+                        subtract_from_temp_variable = { money_need = 1}
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { global.aluminum_stock > 999 }
+                                    check_variable = { money_need < stockpile_money }
+                                }
+                            }
+                            subtract_from_variable = { global.aluminum_stock = 1000}
+                            add_to_variable = { stockpile_aluminum = 1000}
+                            subtract_from_variable = { stockpile_money = money_need}
+                            subtract_from_variable = { stockpile_money = 1}
+                        }
+                    }
+
+                    add_to_temp_variable = {stockpile_goal_aluminum=1000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_aluminum<stockpile_aluminum } 
+                        }
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { stockpile_aluminum > 999 }
+                                }
+                            }
+                            subtract_from_variable = { stockpile_aluminum = 1000}
+                            add_to_variable = { global.aluminum_stock = 1000}
+
+                            set_temp_variable = { money_plus = 1000 }
+                            multiply_temp_variable = {money_plus = global.btrgmprs_cost_aluminum}
+
+
+                            add_to_variable = { stockpile_money = money_plus}
+
+
+
+                        }
+                    }
+
+                }
+                
+                ############### tungsten buy
+                if = {
+                    limit = {
+                        AND = {
+                            check_variable = { btrgmprs_market_day > 3 }
+                            is_ai = yes
+                        }    
+                    }
+                    
+
+                    set_temp_variable = {stockpile_goal_tungsten=resource_consumed@tungsten}
+                    multiply_temp_variable = {stockpile_goal_tungsten=30}
+                    add_to_temp_variable = {stockpile_goal_tungsten=3000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_tungsten>stockpile_tungsten } 
+                        }
+
+                        set_temp_variable = {money_need=0}
+                        add_to_temp_variable = {money_need = 1000}
+                        multiply_temp_variable = {money_need = global.btrgmprs_cost_tungsten}
+                        subtract_from_temp_variable = { money_need = 1}
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { global.tungsten_stock > 999 }
+                                    check_variable = { money_need < stockpile_money }
+                                }
+                            }
+                            subtract_from_variable = { global.tungsten_stock = 1000}
+                            add_to_variable = { stockpile_tungsten = 1000}
+                            subtract_from_variable = { stockpile_money = money_need}
+                            subtract_from_variable = { stockpile_money = 1}
+                        }
+                    }
+
+                    add_to_temp_variable = {stockpile_goal_tungsten=1000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_tungsten<stockpile_tungsten } 
+                        }
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { stockpile_tungsten > 999 }
+                                }
+                            }
+                            subtract_from_variable = { stockpile_tungsten = 1000}
+                            add_to_variable = { global.tungsten_stock = 1000}
+
+                            set_temp_variable = { money_plus = 1000 }
+                            multiply_temp_variable = {money_plus = global.btrgmprs_cost_tungsten}
+
+
+                            add_to_variable = { stockpile_money = money_plus}
+
+
+
+                        }
+                    }
+
+
+                }
+
+                ############### chromium buy
+                if = {
+                    limit = {
+                        AND = {
+                            check_variable = { btrgmprs_market_day > 3 }
+                            is_ai = yes
+                        }    
+                    }
+                    
+
+                    set_temp_variable = {stockpile_goal_chromium=resource_consumed@chromium}
+                    multiply_temp_variable = {stockpile_goal_chromium=30}
+                    add_to_temp_variable = {stockpile_goal_chromium=3000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_chromium>stockpile_chromium } 
+                        }
+
+                        set_temp_variable = {money_need=0}
+                        add_to_temp_variable = {money_need = 1000}
+                        multiply_temp_variable = {money_need = global.btrgmprs_cost_chromium}
+                        subtract_from_temp_variable = { money_need = 1}
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { global.chromium_stock > 999 }
+                                    check_variable = { money_need < stockpile_money }
+                                }
+                            }
+                            subtract_from_variable = { global.chromium_stock = 1000}
+                            add_to_variable = { stockpile_chromium = 1000}
+                            subtract_from_variable = { stockpile_money = money_need}
+                            subtract_from_variable = { stockpile_money = 1}
+                        }
+                    }
+
+
+
+                    add_to_temp_variable = {stockpile_goal_chromium=1000}
+
+                    if = {
+                        limit = {
+                            check_variable = { stockpile_goal_chromium<stockpile_chromium } 
+                        }
+
+                        if = {
+                            limit = {
+                                AND = {
+                                    check_variable = { stockpile_chromium > 999 }
+                                }
+                            }
+                            subtract_from_variable = { stockpile_chromium = 1000}
+                            add_to_variable = { global.chromium_stock = 1000}
+
+                            set_temp_variable = { money_plus = 1000 }
+                            multiply_temp_variable = {money_plus = global.btrgmprs_cost_chromium}
+
+
+                            add_to_variable = { stockpile_money = money_plus}
+
+
+
+                        }
+                    }
+
+                }
+
+
+                ###############################################################################
+
+
+
+
+                if = {
+                    limit = {
+                        AND = {
+                            check_variable = { btrgmprs_market_day > 3 }
+                            is_ai = yes
+                        }    
+                    }
+                    set_variable = {btrgmprs_market_day=0}
+                }
+
+
+        	}
+
+
+
+
+        }
+    }
+}

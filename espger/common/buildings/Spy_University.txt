@@ -1,0 +1,10 @@
+buildings = {
+	Spy_University = {
+		show_on_map = 1
+		base_cost = 8000
+		icon_frame = 15
+		#max_level = 0 # max: 5
+		max_level = 1 # This is the max unlock level
+		shares_slots = yes
+		value = 5
+	}}

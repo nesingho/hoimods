@@ -1,0 +1,183 @@
+
+
+
+
+
+defined_text = {
+    name = GetCountryName
+    
+	
+	text = {
+        trigger = { NOT = {has_country_flag = currently_infiltrating}}
+        localization_key = NIEMANDEN
+    }
+
+    text = {
+        trigger = { TAG = GER}
+        localization_key = "GER_Target_name"
+    }
+    
+	text = {
+        trigger = { TAG = FRA }
+        localization_key = "FRA_Target_name"
+    }
+	
+	text = {
+        trigger = { TAG = SOV }
+        localization_key = "SOV_Target_name"
+    }
+	text = {
+        trigger = { TAG = TUR }
+        localization_key = "TUR_Target_name"
+    }
+	
+	text = {
+        trigger = { TAG = ENG }
+        localization_key = "ENG_Target_name"
+    }
+	
+	text = {
+        trigger = { TAG = USA }
+        localization_key = "USA_Target_name"
+    }
+	
+	text = {
+        trigger = { TAG = JAP }
+        localization_key = "JAP_Target_name"
+    }
+	
+   text = {
+        trigger = { TAG = ITA }
+        localization_key = "ITA_Target_name"
+    }
+	
+    text = {
+        trigger = { has_country_flag = infiltrating_target1}
+        localization_key = "Target1_name"
+    }
+	
+	text = {
+        trigger = { has_country_flag = infiltrating_target2}
+        localization_key = "Target2_name"
+    }
+	
+	text = {
+        trigger = { has_country_flag = infiltrating_target3}
+        localization_key = "Target3_name"
+    }
+	
+	text = {
+        trigger = { has_country_flag = infiltrating_target4}
+        localization_key = "Target4_name"
+    }
+	
+	text = {
+        trigger = { has_country_flag = infiltrating_target5}
+        localization_key = "Target5_name"
+    }
+
+}
+
+
+
+
+defined_text = {
+    name = Training_Efficiency
+    text = {
+        trigger = { check_variable = {training_efficiency = 0 }}
+        localization_key = "Training_Efficiency"
+    }
+	
+	 text = {
+        trigger = {check_variable = {training_efficiency > 0 }}
+        localization_key = "Training_Efficiency_green"
+    }
+	
+}
+
+defined_text = {
+    name = War_Propaganda_Weekly
+    text = {
+        trigger = { check_variable = {war_propaganda_spies = 0 }}
+        localization_key = "War_Propaganda_Weekly"
+    }
+	
+	 text = {
+        trigger = {check_variable = {war_propaganda_spies > 0 }}
+        localization_key = "War_Propaganda_Weekly_green"
+    }
+	
+}
+
+defined_text = {
+    name = Research_Bonus
+    text = {
+        trigger = { check_variable = {research_spies = 0 }}
+        localization_key = "Spy_Research_Aid"
+    }
+	
+	 text = {
+        trigger = {check_variable = {research_spies > 0 }}
+        localization_key = "Spy_Research_Aid_green"
+    }
+	
+}
+
+defined_text = {
+    name = Suppress_Resistance
+    text = {
+        trigger = { check_variable = {resistance_spies = 0 }}
+        localization_key = "Suppress_Resistance"
+    }
+	
+	 text = {
+        trigger = {check_variable = {resistance_spies > 0 }}
+        localization_key = "Suppress_Resistance_green"
+    }
+	
+}
+
+defined_text = {
+    name = Freiwillige
+    text = {
+        trigger = { check_variable = {Freiwillige_spies = 0 }}
+        localization_key = "Freiwillige"
+    }
+	
+	 text = {
+        trigger = {check_variable = {Freiwillige_spies > 0 }}
+        localization_key = "Freiwillige_green"
+    }
+	
+}
+
+defined_text = {
+    name = Encryption
+    text = {
+        trigger = { check_variable = {Encryption_Selected = 0 }}
+        localization_key = Encryption
+    }
+	
+	 text = {
+        trigger = {check_variable = {Encryption_Selected = 1 }}
+        localization_key = "Encryption_selected"
+    }
+	
+}
+
+
+defined_text = {
+    name = Decryption
+    text = {
+        trigger = { check_variable = {Decryption_Selected = 0 }}
+        localization_key = Decryption
+    }
+	
+	 text = {
+        trigger = {check_variable = {Decryption_Selected = 1}}
+        localization_key = "Decryption_Selected"
+    }
+	
+}
+
+

@@ -1,0 +1,810 @@
+﻿
+add_namespace = espionage.news
+
+
+news_event = {
+	id = espionage.news.334
+	title = espionage.news.334.t
+	desc = espionage.news.334.desc
+	picture = GFX_news_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.334.a
+	
+	add_timed_idea = { idea = Civilian_Industry_Disrupted days = 45 }
+	random_owned_state  = { damage_building = { type = industrial_complex damage = 0.9 }}
+	random_owned_state  = { damage_building = { type = industrial_complex damage = 0.9 }}
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+		
+	
+	}
+		
+
+
+news_event = {
+	id = espionage.news.335
+	title = espionage.news.335.t
+	desc = espionage.news.335.desc
+	picture = GFX_spy_captured_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.335.a
+	add_timed_idea = { idea = Foreign_Activities_Repelled days = 30 }
+	add_political_power = -50
+	custom_effect_tooltip = ENHANCED_TOOLTIP
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.338 days = 3}}
+	}}
+	option = { name = espionage.news.335.b
+	add_timed_idea = { idea = Foreign_Activities_Repelled days = 30 }
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.337 days = 3}}
+	}}
+	
+}
+
+news_event = {
+	id = espionage.news.336
+	title = espionage.news.336.t
+	desc = espionage.news.336.desc
+	picture = GFX_espionage_success_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.336.a	
+	add_to_variable = {spy_xp = 35}	
+	add_to_variable = {spies_available = 100}
+	custom_effect_tooltip = SPIES_RETURN_TOOLTIP
+	hidden_effect = {
+
+
+	}
+	
+	}
+}
+
+news_event = {
+	id = espionage.news.337
+	title = espionage.news.337.t
+	desc = espionage.news.337.desc
+	picture = GFX_spy_captured_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.337.a
+
+	add_to_variable = {spy_xp = 35}	
+		custom_effect_tooltip = XP_GAIN_TOOLTIP
+	hidden_effect = {
+
+		 
+	}}
+	trigger = {}	
+	}
+	
+news_event = {
+	id = espionage.news.338
+	title = espionage.news.338.t
+	desc = espionage.news.338.desc
+	picture = GFX_spy_captured_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.338.a
+	add_political_power = -10
+	add_to_variable = {spy_xp = 35}
+	custom_effect_tooltip = XP_GAIN_TOOLTIP
+	
+	hidden_effect = {
+		From = {random_list = {70 = { news_event = { id = espionage.news.339 days = 3 }} 30 = { news_event = { id = espionage.news.340 days = 3}  }}}
+		 
+	}}
+		
+	}
+	
+	news_event = {
+	id = espionage.news.339
+	title = espionage.news.339.t
+	desc = espionage.news.339.desc
+	picture = GFX_espionage_investigation_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.339.a
+	add_war_support = 0.01
+	
+}
+		
+	}
+	
+	news_event = {
+	id = espionage.news.340
+	title = espionage.news.340.t
+	desc = espionage.news.340.desc
+	picture = GFX_news_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.340.a
+	add_war_support = -0.01
+	
+}
+		
+	}
+	
+	
+news_event = {
+	id = espionage.news.341
+	title = espionage.news.341.t
+	desc = espionage.news.341.desc
+	picture = GFX_espionage_investigation_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.341.a
+	
+	add_timed_idea = { idea = Military_Industry_Disrupted days = 45 }
+	random_owned_state  = { damage_building = { type = arms_factory damage = 0.9 }}
+	random_owned_state  = { damage_building = { type = arms_factory damage = 0.9 }}
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+		
+	
+	}
+
+	news_event = {
+	id = espionage.news.342
+	title = espionage.news.342.t
+	desc = espionage.news.342.desc
+	picture = GFX_news_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.342.a  
+	
+	add_timed_idea = { idea = Production_Sabotaged days = 60 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+		
+	
+	}
+	
+	news_event = {
+	id = espionage.news.343
+	title = espionage.news.343.t
+	desc = espionage.news.343.desc
+	picture = GFX_news_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.343.a  
+	
+	add_timed_idea = { idea = Extraction_Sabotaged days = 60 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+		
+	
+	}
+	
+		news_event = {
+	id = espionage.news.344
+	title = espionage.news.344.t
+	desc = espionage.news.344.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.344.a  
+	
+	add_timed_idea = { idea = Recruitment_Sabotaged days = 45 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+		
+	
+	}
+	
+	
+		news_event = {
+	id = espionage.news.345
+	title = espionage.news.345.t
+	desc = espionage.news.345.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.345.a  
+	
+	add_timed_idea = { idea = Planning_Sabotaged days = 90 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+		
+	
+	}
+	
+	news_event = {
+	id = espionage.news.346
+	title = espionage.news.346.t
+	desc = espionage.news.346.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.345.a  
+	
+	add_timed_idea = { idea = supply_disrupted days = 60 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+		
+	
+	}
+	
+	
+	
+	news_event = {
+	id = espionage.news.347
+	title = espionage.news.347.t
+	desc = espionage.news.347.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.345.a  
+	
+	add_timed_idea = { idea = radars_jammed days = 60 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+	}
+	
+	news_event = {
+	id = espionage.news.348
+	title = espionage.news.348.t
+	desc = espionage.news.348.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.348.a  
+	
+	add_timed_idea = { idea = resistance_supported days = 60 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+	}
+	
+	
+	news_event = {
+	id = espionage.news.349
+	title = espionage.news.349.t
+	desc = espionage.news.349.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.345.a  
+	
+	every_army_leader = { add_timed_unit_leader_trait { trait = sick days = 60 }}
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}
+	}}
+	}}
+	
+	
+	news_event = {
+	id = espionage.news.350
+	title = espionage.news.350.t
+	desc = espionage.news.350.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.345.a  
+	
+	add_timed_idea = { idea = pacifists_supported days = 60 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}
+	}}
+	}}
+	
+	news_event = {
+	id = espionage.news.351
+	title = espionage.news.351.t
+	desc = espionage.news.351.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.345.a  
+	
+	add_timed_idea = { idea = research_sabotaged days = 60 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}
+	}}
+	}}
+	
+	
+	
+	news_event = {
+	id = espionage.news.352
+	title = espionage.news.352.t
+	desc = espionage.news.352.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+	option = { name = espionage.news.345.a  
+	
+	add_timed_idea = { idea = research_sabotaged days = 60 }
+	
+	
+	hidden_effect = {
+
+	}}
+	}
+	
+	
+	news_event = {
+	id = espionage.news.353
+	title = espionage.news.353.t
+	desc = espionage.news.353.desc
+	picture = GFX_infiltration_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.353.a  
+	
+	add_to_variable = {spy_xp = 35}
+	custom_effect_tooltip = XP_GAIN_TOOLTIP
+	
+	
+	hidden_effect = {
+	From = {
+			    ROOT = {set_country_flag = currently_infiltrating}
+				
+				if = { limit = { check_variable = {never = 1}}}
+				
+			    else_if = { limit = { ROOT = { TAG = GER } } 
+				save_global_event_target_as = GER_Target
+
+				}
+				
+				else_if = { limit = { ROOT = { TAG = ENG } } 
+				save_global_event_target_as = ENG_Target
+
+				}
+				
+				else_if = { limit = { ROOT = { TAG = TUR } } 
+				save_global_event_target_as = TUR_Target
+
+				}
+				
+				else_if = { limit = { ROOT = { TAG = SOV } } 
+				save_global_event_target_as = SOV_Target
+
+				}
+				
+				else_if = { limit = { ROOT = { TAG = USA } } 
+				save_global_event_target_as = USA_Target
+
+				}
+				
+				else_if = { limit = { ROOT = { TAG = ITA } } 
+				save_global_event_target_as = ITA_Target
+
+				}
+			    
+				else_if = { limit = { ROOT = { TAG = JAP } } 
+				save_global_event_target_as = JAP_Target
+
+				}
+				
+				else_if = { limit = { ROOT = { TAG = FRA } } 
+				save_global_event_target_as = FRA_Target
+
+				}
+				
+			
+				else_if = { limit = {check_variable = {global.target1_used = 0}}
+				save_global_event_target_as = target1 
+				ROOT = {set_country_flag = infiltrating_target1}
+				set_variable = {global.target1_used = 1}
+				}
+				
+				else_if = { limit = {
+				check_variable = {global.target2_used = 0}}
+				save_global_event_target_as = target2 
+				ROOT = {set_country_flag = infiltrating_target2}
+				set_variable = {global.target2_used = 1}
+				}
+			
+			
+				else_if = { limit = {
+				check_variable = {global.target3_used = 0}}
+				save_global_event_target_as = target3	
+				ROOT = {set_country_flag = infiltrating_target3}
+				set_variable = {global.target3_used = 1}
+				}
+			    
+				else_if = { limit = {
+				check_variable = {global.target4_used = 0}}
+				save_global_event_target_as = target3	
+				ROOT = {set_country_flag = infiltrating_target4}
+				set_variable = {global.target4_used = 1}
+				}
+
+				else_if = { limit = {
+				check_variable = {global.target5_used = 0}}
+				save_global_event_target_as = target3	
+				ROOT = {set_country_flag = infiltrating_target5}
+				set_variable = {global.target5_used = 1}
+				}
+				
+				ROOT = {set_variable = {spy_target = PREV.id}}
+      
+	}}}
+	}
+	
+	
+	
+	
+	news_event = {
+	id = espionage.news.354
+	title = espionage.news.354.t
+	desc = espionage.news.354.desc
+	picture = GFX_spies_arrested_event
+
+    is_triggered_only = yes
+	
+	
+	
+	option = { name = espionage.news.354.a  
+	
+  	
+	
+	
+	hidden_effect = {
+	    FROM = {news_event = { id = espionage.news.357 days = 2}}
+	}}
+	}
+	
+	
+	
+	
+	news_event = {
+	id = espionage.news.355
+	title = espionage.news.355.t
+	desc = espionage.news.355.desc
+	picture = GFX_resistance_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.355.a  
+	
+		 
+	
+	
+	hidden_effect = {
+      FROM = {news_event = { id = espionage.news.356 days = 1}}
+	}}
+	}
+	
+	
+
+	
+	news_event = {
+	id = espionage.news.356
+	title = espionage.news.356.t
+	desc = espionage.news.356.desc
+	picture = GFX_resistance_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.356.a  
+	
+		 From.From = { damage_building = { type = infrastructure damage = 5 }}
+	
+	
+	hidden_effect = {
+      
+	}}
+	}
+	
+	news_event = {
+	id = espionage.news.357
+	title = espionage.news.357.t
+	desc = espionage.news.357.desc
+	picture = GFX_resistance_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.356.a  
+	
+		 From.From = { damage_building = { type = air_base damage = 5 }}
+	
+	
+	hidden_effect = {
+      
+	}}
+	}
+	
+	news_event = {
+	id = espionage.news.358
+	title = espionage.news.358.t
+	desc = espionage.news.358.desc
+	picture = GFX_resistance_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.356.a  
+	
+		 From.From = { damage_building = { type = radar_station damage = 5 }}
+	
+	
+	hidden_effect = {
+      
+	}}
+	}
+	
+	news_event = {
+	id = espionage.news.359
+	title = espionage.news.359.t
+	desc = espionage.news.359.desc
+	picture = GFX_spies_arrested_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.359.a  
+	
+	
+	hidden_effect = {
+      
+	}}
+	}
+	
+	news_event = {
+	id = espionage.news.360
+	title = espionage.news.360.t
+	desc = espionage.news.360.desc
+	picture = GFX_ghost_signal
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.360.a  
+	
+	
+	hidden_effect = {
+      FROM = { news_event = { id = espionage.news.353 days = 1}}
+	}}
+	}
+	
+	news_event = {
+	id = espionage.news.361
+	title = espionage.news.361.t
+	desc = espionage.news.310.desc
+	picture = GFX_infiltration_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.360.a  
+	
+	
+	hidden_effect = {
+      FROM = { news_event = { id = espionage.news.362 days = 1}}
+	}}
+	}
+	
+	news_event = {
+	id = espionage.news.362
+	title = espionage.news.362.t
+	desc = espionage.news.362.desc
+	picture = GFX_infiltration_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.362.a  
+	add_to_variable = {spy_xp = 35}
+	custom_effect_tooltip = XP_GAIN_TOOLTIP
+	
+	hidden_effect = {
+      
+	}}
+	}
+	
+
+	
+	
+	
+	news_event = {
+	id = espionage.news.363
+	title = espionage.news.363.t
+	desc = espionage.news.363.desc
+	picture = GFX_spies_arrested_event
+
+    mean_time_to_happen = {
+		days = 60
+	}
+
+	trigger = {
+		check_variable = { Spy_Efficiency < Target_Spy_Efficiency}
+	} 
+	
+	
+	
+	option = { name = espionage.news.363.a  
+	
+  			clr_country_flag = currently_infiltrating
+			
+			If = {limit = {has_country_flag = infiltrating_target1}
+			clr_country_flag = infiltrating_target1
+			set_variable = {global.target1_used = 0}}
+			
+			If = {limit = {has_country_flag = infiltrating_target2}
+			clr_country_flag = infiltrating_target2
+			set_variable = {global.target2_used = 0}}
+			
+			If = {limit = {has_country_flag = infiltrating_target3}
+			clr_country_flag = infiltrating_target3
+			set_variable = {global.target3_used = 0}}			
+			
+			If = {limit = {has_country_flag = infiltrating_target4}
+			clr_country_flag = infiltrating_target4
+			set_variable = {global.target4_used = 0}}		
+
+			If = {limit = {has_country_flag = infiltrating_target5}
+			clr_country_flag = infiltrating_target5
+			set_variable = {global.target5_used = 0}}	
+	        
+			set_variable = {spy_target = 0}
+
+			set_variable = {spy_target = 0}
+			set_variable = {target_num_of_civilian_factories = 0}
+			set_variable = {target_num_of_military_factories = 0}
+			set_variable = {target_num_of_naval_factories = 0}		
+			set_variable = {target_manpower = 0}
+			set_variable = {target_amount_manpower_in_deployment_queue = 0}
+			set_variable = {target_num_divisions = 0}
+			set_variable = {target_num_of_nukes = 0}
+			set_variable = {target_land_doctrine_level = 0}
+			set_variable = {enemy_light_armor_year = 0}
+			set_variable = {enemy_medium_armor_year = 0}
+			set_variable = {enemy_heavy_armor_year = 0}
+			set_variable = {enemy_fighter_year = 0}
+			set_variable = {enemy_CAS_year = 0}
+			set_variable = {enemy_strategic_bomber_year = 0}
+			
+			
+
+	
+	hidden_effect = {
+	    
+	}}
+	}
+	
+	
+	news_event = {
+	id = espionage.news.364
+	title = espionage.news.364.t
+	desc = espionage.news.364.desc
+	picture = GFX_resistance_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.364.a  
+	
+		 
+	
+	
+	hidden_effect = {
+      FROM = {news_event = { id = espionage.news.357 days = 1}}
+	}}
+	}
+	
+	news_event = {
+	id = espionage.news.365
+	title = espionage.news.365.t
+	desc = espionage.news.365.desc
+	picture = GFX_resistance_event
+
+	is_triggered_only = yes
+   
+	option = { name = espionage.news.365.a  
+	
+		 
+	
+	
+	hidden_effect = {
+      FROM = {news_event = { id = espionage.news.358 days = 1}}
+	}}
+	}
+	
+	news_event = {
+	id = espionage.news.366
+	title = espionage.news.366.t
+	desc = espionage.news.366.desc
+	picture = GFX_espionage_investigation_event
+
+	is_triggered_only = yes
+
+	option = { name = espionage.news.366.a  
+	
+	add_timed_idea = { idea = Sowed_Discontent days = 60 }
+	
+	
+	hidden_effect = {
+		FROM = { news_event = { id = espionage.news.336 days = 3}}
+	}}
+		
+	
+	}
+	
+	
+	country_event = {
+	id = espionage.news.367
+	title = espionage.news.367.t
+	desc = espionage.news.367.desc
+	picture = GFX_spies_arrested_event
+
+    mean_time_to_happen = {
+		days = 800
+		modifier = {
+			factor = 0.5
+			Spy_University < 1 }
+		modifier = {
+			factor = 2
+			Spy_University > 1 }
+		modifier = {
+			factor = 20 
+			Spy_University > 4 }
+		}
+
+
+
+	trigger = {
+		is_AI = yes
+		check_variable = { num_of_factories > 50}
+
+	} 
+	
+	
+	
+	option = { name = espionage.news.367.a 
+
+	random_owned_state = { add_building_construction = { type = Spy_University level = 1 instant_build = no } }
+
+
+	}}
+	
+	
+
