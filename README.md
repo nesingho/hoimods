@@ -10,7 +10,7 @@ Find the desired mod and download it.
 
 Unpack mod folder in
 
-/home/<USER>/.local/share/Paradox Interactive/Hearts of Iron IV/mod/
+/home/USER/.local/share/Paradox Interactive/Hearts of Iron IV/mod/
 
 If folders are missing, try running the game or make them by yourself.
 
